@@ -1,0 +1,9 @@
+[
+	{
+		"title": "This is post 1's title",
+		"description": "This is post 1's description",
+		"dateFormatted": "This is post 1's date",
+		"content": "What is content?",
+		"link": "/post/post-1"
+	}
+]
