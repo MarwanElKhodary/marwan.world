@@ -1,13 +1,9 @@
-# Aria Template
+# marwan.world
 
-This is a personal blog, portfolio, or blog template created for [Astro](https://astro.build).
+Source code for marwan.world, my personal website built with [Astro](https://astro.build/).
 
-Astro port of [aria](https://github.com/static-templates/aria).
+## License
 
-![Aria Template Cover Photo](https://github.com/ccbikai/astro-aria/blob/main/public/assets/images/cover.png?raw=true)
+Feel free to use the source code as inspiration but please don't copy **everything**.
 
-You can install this theme with the [Astro](https://astro.build) command like so:
-
-```js
-npm create astro@latest -- --template ccbikai/astro-aria
-```
+Thanks for visiting!
