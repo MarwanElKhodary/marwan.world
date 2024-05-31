@@ -8,6 +8,7 @@ export default {
 				gasoline: "#CCE649",
 				cream: "#F6F3E6",
 				rock: "#2B3333",
+				grey: "#6D6D6D"
 			},
 		},
 	},

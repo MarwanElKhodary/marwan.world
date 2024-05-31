@@ -1,8 +1,14 @@
 [
 	{
-		"title": "This is post 1's title",
-		"description": "This is post 1's description",
-		"dateFormatted": "This is post 1's date",
+		"title": "only lower case blog titles",
+		"description": "blog blog body something computer name name blog blog body something computer name name blog blog body something computer name name blog blog body something computer name name ",
+		"dateFormatted": "22 May 2024",
+		"link": "/post/post-1"
+	},
+	{
+		"title": "This is post 2's title",
+		"description": "This is post 2's description",
+		"dateFormatted": "This is post 12s date",
 		"content": "What is content?",
 		"link": "/post/post-1"
 	}
