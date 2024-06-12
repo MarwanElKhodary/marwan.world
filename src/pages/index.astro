@@ -1,32 +1,31 @@
 ---
 import Layout from "../layouts/main.astro";
-import PcPart from "../components/pc-part.astro";
 ---
 
 <Layout title="Marwan ElKhodary">
-  <div class="relative mx-28 my-20 flex">
+  <div class="relative mx-96 my-20 flex">
     <!--Intro Blurb -->
     <div class="relative mt-56 mb-44 w-2/4">
       <div class="">
         <h1
-          class="mb-6 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-gasoline"
+          class="mb-6 text-5xl font-futuraMedium leading-tight md:text-4xl lg:text-6xl dark:text-gasoline"
         >
           Hi! I'm Marwan.
         </h1>
-        <p class="mb-6 text-base text-rock dark:text-cream">
+        <p class="font-futuraBook mb-6 text-xl text-rock dark:text-cream">
           I'm a Full Stack Developer based in Toronto, Canada.
         </p>
-        <p class="mb-6 text-base text-rock dark:text-cream">
-          I've been building stuff on the web since 2017.
+        <p class="font-futuraBook mb-6 text-xl text-rock dark:text-cream">
+          I've been building stuff on the web since 2020.
         </p>
-        <p class="mb-6 text-base text-rock dark:text-cream">
-          In 2021, I built my own computer. Hope you have fun building your own
-          too!
+        <p class="font-futuraBook mb-6 text-xl text-rock dark:text-cream">
+          In 2021, I built my own computer. You can build your own too!
         </p>
+        
       </div>
     </div>
     <div id="pc-parts-container" class="relative w-3/4">
-      <div id="cpu" class="absolute w-20 h-12 bottom-0 left-0">
+      <div id="cpu" class="absolute w-20 h-12 bottom-64 left-56">
         <svg
           width="83"
           height="49"
@@ -76,7 +75,7 @@ import PcPart from "../components/pc-part.astro";
           </defs>
         </svg>
       </div>
-      <div id="motherboard" class="absolute w-52 h-32 top-0 right-0">
+      <div id="motherboard" class="absolute w-52 h-32 top-32 right-32">
         <svg
           width="209"
           height="131"
@@ -252,7 +251,7 @@ import PcPart from "../components/pc-part.astro";
             fill="white"></path>
         </svg>
       </div>
-      <div id="cpu-cooler" class="absolute w-24 h-24 bottom-0 right-1/2">
+      <div id="cpu-cooler" class="absolute w-24 h-24 bottom-32 right-2/3">
         <svg
           width="92"
           height="96"
@@ -307,7 +306,7 @@ import PcPart from "../components/pc-part.astro";
             fill="#96AE1A"></path>
         </svg>
       </div>
-      <div id="case" class="absolute w-52 h-72 right-0 bottom-0">
+      <div id="case" class="absolute w-52 h-72 right-16 bottom-20">
         <svg
           width="216"
           height="277"
