@@ -19,12 +19,12 @@ const { frontmatter } = Astro.props;
       >
       </div>
       <h1
-        class="w-full max-w-2xl mx-auto text-xl font-extrabold leading-tight tracking-tight text-left md:mb-12 md:text-4xl dark:text-gasoline lg:text-5xl md:leading-none"
+        class="w-full max-w-2xl mx-auto font-futuraExtraBold leading-tight tracking-tight text-left md:mb-12 md:text-4xl text-rock dark:text-gasoline lg:text-5xl md:leading-none"
       >
         {frontmatter.title}
       </h1>
       <div
-        class="w-full max-w-2xl mx-auto text-left flex flex-row space-x-4 font-normal text-grey dark:text-neutral-400"
+        class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 font-normal text-grey dark:text-neutral-400"
       >
         <p>{frontmatter.dateFormatted}</p>
         <p>12 words</p>
@@ -32,7 +32,7 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
     <article
-      class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
+      class="w-full max-w-2xl font-futuraMedium text-rock dark:text-cream mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
     >
       <slot />
     </article>
