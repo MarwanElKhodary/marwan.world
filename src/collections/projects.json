@@ -1,20 +1,14 @@
 [
 	{
-		"name": "Project One",
-		"description": "Stuff About My Project",
-		"image": "/assets/images/projects/email.ml.png",
-		"url": "URL"
+		"name": "copyfoldertree",
+		"description": "Simplify copying your VS Code folder structure to text",
+		"image": "/assets/images/projects/copyfoldertree.png",
+		"url": "https://marketplace.visualstudio.com/items?itemName=MarwanElKhodary.copyfoldertree"
 	},
 	{
-		"name": "Project Two",
-		"description": "Stuff About My Second Project",
-		"image": "/assets/images/projects/dns.surf.png",
-		"url": "URL"
-	},
-	{
-		"name": "Project Three",
-		"description": "Stuff About My Third Project",
-		"image": "/assets/images/projects/html.zone.png",
-		"url": "URL"
+		"name": "Netzero",
+		"description": "Sustainability app that helps Queen's students track their carbon footprint",
+		"image": "/assets/images/projects/netzero.PNG",
+		"url": "https://kickercna.ca/2020/11/03/new-sustainability-app-fills-gap-in-carbon-tracking/"
 	}
 ]
