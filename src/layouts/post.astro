@@ -27,8 +27,8 @@ const { frontmatter } = Astro.props;
         class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 font-normal text-grey dark:text-neutral-400"
       >
         <p>{frontmatter.dateFormatted}</p>
-        <p>12 words</p>
-        <p>10 min</p>
+        <p>{frontmatter.wordCount}</p>
+        <p>{frontmatter.readingTime}</p>
       </div>
     </div>
     <article

@@ -26,8 +26,8 @@ const postsLoop = posts.slice(0, count);
           </h2>
           <div class="flex flex-row space-x-4 font-futuraBook text-small text-grey dark:text-neutral-400">
             <p>{post.dateFormatted}</p>
-            <p>12 words </p>
-            <p>10 min </p>
+            <p>{post.wordCount}</p>
+            <p>{post.readingTime}</p>
           </div>
           <div class="my-2">
             <p class="font-futuraMedium text-lg text-rock dark:text-cream">{post.description}</p>

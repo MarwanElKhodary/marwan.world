@@ -3,7 +3,7 @@
 		"name": "copyfoldertree",
 		"description": "Simplify copying your VS Code folder structure to text",
 		"image": "/assets/images/projects/copyfoldertree.png",
-		"url": "https://marketplace.visualstudio.com/items?itemName=MarwanElKhodary.copyfoldertree"
+		"url": "https://github.com/MarwanElKhodary/copyfoldertree"
 	},
 	{
 		"name": "Netzero",

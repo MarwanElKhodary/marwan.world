@@ -1,14 +1,10 @@
 [
 	{
-		"title": "implementing a custom chatter component",
-		"description": "writing about my trials with LWCs and Apex",
-		"dateFormatted": "22 May 2024",
-		"link": "/post/post-1"
-	},
-	{
-		"title": "what i like and dont like about consulting",
-		"description": "pros: variety of projects; cons: bench time",
-		"dateFormatted": "20 May 2024",
-		"link": "/post/post-2"
+		"title": "processing inline images in Salesforce",
+		"description": "how to post an inline image in Salesforce Chatter with LWCs and Apex",
+		"dateFormatted": "18 June 2024",
+		"wordCount": "590 words",
+		"readingTime": "4 min",
+		"link": "/post/processing-inline-images-in-salesforce"
 	}
 ]
