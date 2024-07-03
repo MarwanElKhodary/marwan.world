@@ -5,5 +5,3 @@ Source code for marwan.world, my personal website built with [Astro](https://ast
 ## License
 
 Feel free to use the source code as inspiration but please don't copy **everything**.
-
-Thanks for visiting!
