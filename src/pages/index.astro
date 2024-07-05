@@ -5,7 +5,7 @@ import Motherboard from "../components/pc-parts/motherboard.astro";
 import Psu from "../components/pc-parts/psu.astro";
 import Hdd from "../components/pc-parts/hdd.astro";
 import Case from "../components/pc-parts/case.astro";
-import CpuCooler from "../components/pc-parts/cpuCooler.astro"
+import CpuCooler from "../components/pc-parts/cpuCooler.astro";
 ---
 
 <script src="../assets/js/dragAndDrop.js"></script>
@@ -41,23 +41,23 @@ import CpuCooler from "../components/pc-parts/cpuCooler.astro"
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="flex flex-wrap h-1/2 lg:h-full lg:w-1/2 2xl:w-2/3">
-      <div class="drag-drop z-50 w-20 h-12">
-        <Cpu  />
+    <div class="relative flex flex-wrap h-1/2 lg:h-full lg:w-1/2 2xl:w-2/3">
+      <div class="absolute drag-drop z-50 w-20 h-12 top-0 right-0">
+        <Cpu />
       </div>
-      <div class="drag-drop z-40 w-52 h-32">
-        <Motherboard  />
+      <div class="absolute drag-drop z-40 size-1/2 right-0 top-10">
+        <Motherboard />
       </div>
-      <div class="drag-drop w-28 h-28">
-        <Psu  />
+      <div class="absolute drag-drop size-1/3 bottom-0 right-0">
+        <Psu />
       </div>
-      <div class="drag-drop w-40 h-28">
-        <Hdd  />
+      <div class="absolute drag-drop size-1/3 top-0 left-28">
+        <Hdd />
       </div>
-      <div class="shrink w-52 h-72">
+      <div class="absolute size-7/12 bottom-0 left-0">
         <Case />
       </div>
-      <div class="drag-drop w-24 h-24">
+      <div class="absolute drag-drop w-24 h-24">
         <CpuCooler />
       </div>
     </div>
