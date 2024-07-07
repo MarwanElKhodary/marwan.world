@@ -88,6 +88,12 @@ window.addEventListener("load", () => {
   interact(".drag-drop")
     .styleCursor(false)
     .draggable({
+      modifiers: [
+        interact.modifiers.restrictRect({
+          restriction: 'parent',
+          endOnly: true
+        })
+      ],
       listeners: {
         move(event) {
           dragMoveListener(event);
