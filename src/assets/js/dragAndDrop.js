@@ -21,34 +21,25 @@ function dragMoveListener(event) {
 // event listeners-----------------------------------------------------------
 
 window.addEventListener("load", () => {
-  interact(".draggable")
-    .styleCursor(false)
-    .draggable({
-      listeners: {
-        start(event) {},
-        //function called on every dragmove event
+  interact(".drag-drop")
+  .styleCursor(false)
+  .draggable({
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: "parent",
+        endOnly: true,
+      }),
+    ],
+    listeners: {
         move(event) {
           dragMoveListener(event);
         },
-        //function called on every dragend event
         end(event) {
-          var textElement = event.target;
-
-          textElement &&
-            (textElement.textContent =
-              "moved a distance of " +
-              Math.sqrt(
-                (Math.pow(event.pageX - event.x0, 2) +
-                  Math.pow(event.pageY - event.y0, 2)) |
-                  0
-              ).toFixed(2) +
-              "px");
-
           event.target.style.cursor = "grab";
         },
       },
     });
-
+  
   interact(".dropzone")
     .styleCursor(false)
     .dropzone({
@@ -81,25 +72,6 @@ window.addEventListener("load", () => {
           //remove active dropzone feedback
           event.target.classList.remove("drop-active");
           event.target.classList.remove("drop-target");
-        },
-      },
-    });
-
-  interact(".drag-drop")
-    .styleCursor(false)
-    .draggable({
-      modifiers: [
-        interact.modifiers.restrictRect({
-          restriction: 'parent',
-          endOnly: true
-        })
-      ],
-      listeners: {
-        move(event) {
-          dragMoveListener(event);
-        },
-        end(event) {
-          event.target.style.cursor = "grab";
         },
       },
     });
