@@ -6,12 +6,10 @@ import Layout from "../layouts/main.astro";
 ---
 
 <Layout title="Projects | Marwan ElKhodary">
-  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
-    <PageHeading
-      title="Projects"
-      description="Description"
-    />
-
+  <section class="relative z-20 max-w-2xl mx-auto my-12 pt-10 px-7 lg:px-0">
+    <div>
+      <PageHeading title="Projects" />
+    </div>
     <div
       class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
     >
@@ -24,7 +22,7 @@ import Layout from "../layouts/main.astro";
               image={project.image}
               url={project.url}
             />
-          )
+          );
         })
       }
     </div>
