@@ -3,7 +3,6 @@ import { parse } from 'node-html-parser';
 
 export interface Props {
     icon: string;
-    class?: string;
 }
 
 function getSVG(name: string) {
@@ -18,7 +17,7 @@ function getSVG(name: string) {
     const svg = root.querySelector('svg');
 
     if (!svg) {
-        throw new Error(`SVG element not found in ${filepath}`);
+        throw new Error(`<svg> element not found in ${filepath}`);
     }
     
     const { attributes, innerHTML } = svg;
@@ -26,10 +25,10 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { icon, class: tailwindClasses, ...attributes } = Astro.props as Props;
+const { icon, ...attributes } = Astro.props as Props;
 const { attributes: baseAttributes, innerHTML } = getSVG(icon);
 
-const svgAttributes = { ...baseAttributes, ...attributes, class: tailwindClasses };
+const svgAttributes = { ...baseAttributes, ...attributes };
 ---
 
 <svg {...svgAttributes} set:html={innerHTML}></svg>
