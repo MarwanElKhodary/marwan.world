@@ -3,6 +3,7 @@ import { parse } from 'node-html-parser';
 
 export interface Props {
     pIcon: string;
+    pClass?: string;
 }
 
 function getSVG(name: string) {
@@ -25,10 +26,14 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { pIcon, ...attributes } = Astro.props as Props;
+const { pIcon, pClass, ...attributes } = Astro.props as Props;
 const { attributes: baseAttributes, innerHTML } = getSVG(pIcon);
 
-const svgAttributes = { ...baseAttributes, ...attributes };
+const svgAttributes = { 
+    ...baseAttributes, 
+    ...attributes,
+    class:  `${baseAttributes.class || ''} ${pClass || ''}`.trim()
+};
 ---
 
 <svg {...svgAttributes} set:html={innerHTML}></svg>
