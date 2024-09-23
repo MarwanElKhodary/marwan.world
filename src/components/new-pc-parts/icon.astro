@@ -2,7 +2,7 @@
 import { parse } from 'node-html-parser';
 
 export interface Props {
-    icon: string;
+    pIcon: string;
 }
 
 function getSVG(name: string) {
@@ -25,8 +25,8 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { icon, ...attributes } = Astro.props as Props;
-const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+const { pIcon, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(pIcon);
 
 const svgAttributes = { ...baseAttributes, ...attributes };
 ---
