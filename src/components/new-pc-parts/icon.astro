@@ -4,6 +4,8 @@ import { parse } from 'node-html-parser';
 export interface Props {
     pLabel: string;
     pLabelClass?: string;
+    pPart: string;
+    pPartClass?: string;
 }
 
 function getSVG(name: string) {
@@ -26,14 +28,20 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { pLabel, pLabelClass } = Astro.props as Props;
+const { pLabel, pLabelClass, pPart, pPartClass } = Astro.props as Props;
 const { attributes: labelDefAttributes, innerHTML: labelHTML } = getSVG(pLabel);
+const { attributes: partDefAttributes, innerHTML: partHTML } = getSVG(pPart);
 
-
-const svgAttributes = { 
+const labelAttributes = { 
     ...labelDefAttributes, 
     class:  `${labelDefAttributes.class || ''} ${pLabelClass || ''}`.trim()
 };
+
+const partAttributes = {
+    ...partDefAttributes,
+    class: `${partDefAttributes.class || ''} ${pPartClass || ''}`.trim()
+}
 ---
 
-<svg {...svgAttributes} set:html={labelHTML}></svg>
+<svg {...labelAttributes} set:html={labelHTML}></svg>
+<svg {...partAttributes} set:html={partHTML}></svg> 
