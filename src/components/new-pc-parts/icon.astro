@@ -26,14 +26,14 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { pLabel, pLabelClass, ...attributes } = Astro.props as Props;
-const { attributes: baseAttributes, innerHTML } = getSVG(pLabel);
+const { pLabel, pLabelClass } = Astro.props as Props;
+const { attributes: labelDefAttributes, innerHTML: labelHTML } = getSVG(pLabel);
+
 
 const svgAttributes = { 
-    ...baseAttributes, 
-    ...attributes,
-    class:  `${baseAttributes.class || ''} ${pLabelClass || ''}`.trim()
+    ...labelDefAttributes, 
+    class:  `${labelDefAttributes.class || ''} ${pLabelClass || ''}`.trim()
 };
 ---
 
-<svg {...svgAttributes} set:html={innerHTML}></svg>
+<svg {...svgAttributes} set:html={labelHTML}></svg>
