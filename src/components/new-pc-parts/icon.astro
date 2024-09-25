@@ -2,10 +2,10 @@
 import { parse } from 'node-html-parser';
 
 export interface Props {
-    pLabel: string;
-    pLabelClass?: string;
     pPart: string;
     pPartClass?: string;
+    pLabel?: string;
+    pLabelClass?: string;
 }
 
 function getSVG(name: string) {
@@ -29,13 +29,20 @@ function getSVG(name: string) {
 }
 
 const { pLabel, pLabelClass, pPart, pPartClass } = Astro.props as Props;
-const { attributes: labelDefAttributes, innerHTML: labelHTML } = getSVG(pLabel);
-const { attributes: partDefAttributes, innerHTML: partHTML } = getSVG(pPart);
 
-const labelAttributes = { 
-    ...labelDefAttributes, 
-    class:  `${labelDefAttributes.class || ''} ${pLabelClass || ''}`.trim()
-};
+let labelAttributes = {};
+let labelHTML = {};
+
+if (pLabel) {
+    const { attributes: labelDefAttributes, innerHTML: labelContent } = getSVG(pLabel);
+    labelAttributes = { 
+        ...labelDefAttributes, 
+        class:  `${labelDefAttributes.class || ''} ${pLabelClass || ''}`.trim()
+    };
+    labelHTML = labelContent;
+}
+
+const { attributes: partDefAttributes, innerHTML: partHTML } = getSVG(pPart);
 
 const partAttributes = {
     ...partDefAttributes,
@@ -43,7 +50,11 @@ const partAttributes = {
 }
 ---
 
-<div class="flex justify-center items-center">
-    <svg {...labelAttributes} set:html={labelHTML}></svg>
-    <svg {...partAttributes} set:html={partHTML}></svg> 
-</div>
+{pLabel ? (
+    <div class="flex justify-center items-center">
+        <svg {...labelAttributes} set:html={labelHTML}></svg>
+        <svg {...partAttributes} set:html={partHTML}></svg>
+    </div>
+) : (
+    <svg {...partAttributes} set:html={partHTML}></svg>
+)}
