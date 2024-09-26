@@ -1,0 +1,60 @@
+---
+import { parse } from 'node-html-parser';
+
+export interface Props {
+    pPart: string;
+    pPartClass?: string;
+    pLabel?: string;
+    pLabelClass?: string;
+}
+
+function getSVG(name: string) {
+    const filepath = `/src/svg/${name}.svg`;
+    const files = import.meta.glob<string>('/src/svg/**/*.svg', {query: '?raw', import: 'default', eager: true});
+
+    if (!(filepath in files)) {
+        throw new Error (`${filepath} not found`);
+    }
+
+    const root = parse(files[filepath]);
+    const svg = root.querySelector('svg');
+
+    if (!svg) {
+        throw new Error(`<svg> element not found in ${filepath}`);
+    }
+    
+    const { attributes, innerHTML } = svg;
+
+    return { attributes, innerHTML };
+}
+
+const { pLabel, pLabelClass, pPart, pPartClass } = Astro.props as Props;
+
+let labelAttributes = {};
+let labelHTML = {};
+
+if (pLabel) {
+    const { attributes: labelDefAttributes, innerHTML: labelContent } = getSVG(pLabel);
+    labelAttributes = { 
+        ...labelDefAttributes, 
+        class:  `${labelDefAttributes.class || ''} ${pLabelClass || ''}`.trim()
+    };
+    labelHTML = labelContent;
+}
+
+const { attributes: partDefAttributes, innerHTML: partHTML } = getSVG(pPart);
+
+const partAttributes = {
+    ...partDefAttributes,
+    class: `${partDefAttributes.class || ''} ${pPartClass || ''}`.trim()
+}
+---
+
+{pLabel ? (
+    <div class="flex justify-center items-center">
+        <svg {...labelAttributes} set:html={labelHTML}></svg>
+        <svg {...partAttributes} set:html={partHTML}></svg>
+    </div>
+) : (
+    <svg {...partAttributes} set:html={partHTML}></svg>
+)}
