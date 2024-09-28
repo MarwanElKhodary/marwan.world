@@ -46,6 +46,7 @@ const { attributes: partDefAttributes, innerHTML: partHTML } = getSVG(pPart);
 
 const partAttributes = {
     ...partDefAttributes,
+    id: pPart,
     class: `${partDefAttributes.class || ''} ${pPartClass || ''}`.trim()
 }
 ---
