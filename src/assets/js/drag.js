@@ -28,12 +28,12 @@ window.addEventListener("load", () => {
   interact(".drag-drop")
   .styleCursor(false)
   .draggable({
-    modifiers: [
-      interact.modifiers.restrictRect({
-        restriction: "parent",
-        endOnly: true,
-      }),
-    ],
+    // modifiers: [
+    //   interact.modifiers.restrictRect({
+    //     restriction: "parent",
+    //     endOnly: true,
+    //   }),
+    // ],
     listeners: {
         move(event) {
           dragMoveListener(event);
@@ -47,30 +47,33 @@ window.addEventListener("load", () => {
   interact(".dropzone")
     .styleCursor(false)
     .dropzone({
-      accept: "#yes-drop",
-      overlap: 0.75,
+      accept: "#cpu", //TODO: Add logic for accepting different drops
+      overlap: 0.2,
 
       listeners: {
         dropactivate(event) {
           event.target.classList.add("drop-active");
         },
         dragenter(event) {
-          var draggableElement = event.relatedTarget;
-          var dropzoneElement = event.target;
+          // var draggableElement = event.relatedTarget;
+          // var dropzoneElement = event.target;
 
           //feedback the possibility of a drop
-          dropzoneElement.classList.add("drop-target");
-          draggableElement.classList.add("can-drop");
-          draggableElement.textContent = "Dragged in";
+          // dropzoneElement.classList.add("drop-target");
+          // draggableElement.classList.add("can-drop");
+          // draggableElement.textContent = "Dragged in";
+          console.log('dragged in');
         },
         dragleave(event) {
           //remote the drop feedback style
-          event.target.classList.remove("drop-target");
-          event.relatedTarget.classList.remove("can-drop");
-          event.relatedTarget.textContent = "Dragged out";
+          // event.target.classList.remove("drop-target");
+          // event.relatedTarget.classList.remove("can-drop");
+          // event.relatedTarget.textContent = "Dragged out";
+          console.log('dragged out');
         },
         drop(event) {
-          event.relatedTarget.textContent = "Dropped";
+          // event.relatedTarget.textContent = "Dropped";
+          console.log('dropped');
         },
         dropdeactivate(event) {
           //remove active dropzone feedback
