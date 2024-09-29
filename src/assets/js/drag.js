@@ -84,7 +84,7 @@ window.addEventListener("load", () => {
           label.style.display = "none";
 
           parentDiv.innerHTML = `
-            <svg class="text-rock dark:text-gasoline fill-none lg:fill-current stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
+            <svg class="text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
               <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>
           `;
