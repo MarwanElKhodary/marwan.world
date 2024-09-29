@@ -74,6 +74,7 @@ window.addEventListener("load", () => {
         drop(event) {
           const droppedIcon = event.relatedTarget;
           const dropzone    = event.target;
+          const parentDiv   = dropzone.parentNode;
 
           var dropzoneId = dropzone.getAttribute('id');
           var label      = document.getElementById(dropzoneId + "-label");
@@ -81,6 +82,12 @@ window.addEventListener("load", () => {
           droppedIcon.style.display = "none";
           dropzone.style.display = "none";
           label.style.display = "none";
+
+          parentDiv.innerHTML = `
+            <svg class="text-rock dark:text-gasoline fill-current stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
+              <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
+            </svg>
+          `;
         },
         dropdeactivate(event) {
           //remove active dropzone feedback
