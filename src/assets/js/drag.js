@@ -2,15 +2,15 @@ import interact from "interactjs";
 
 // functions-----------------------------------------------------------------
 
-function dragMoveListener(event) {
-  var target   = event.target;
+function dragMoveListener(pEvent) {
+  var target   = pEvent.target;
   var dataName = target.getAttribute('data-name');
   var label    = document.getElementById(dataName + "-label");
   label.style.display = "none";
 
   //keep the dragged position in the data-x/data-y attributes
-  var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
-  var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+  var x = (parseFloat(target.getAttribute("data-x")) || 0) + pEvent.dx;
+  var y = (parseFloat(target.getAttribute("data-y")) || 0) + pEvent.dy;
 
   //translate the element
   target.style.transform = `translate(${x}px, ${y}px)`;
@@ -35,11 +35,11 @@ window.addEventListener("load", () => {
     //   }),
     // ],
     listeners: {
-        move(event) {
-          dragMoveListener(event);
+        move(pEvent) {
+          dragMoveListener(pEvent);
         },
-        end(event) {
-          event.target.style.cursor = "grab";
+        end(pEvent) {
+          pEvent.target.style.cursor = "grab";
         },
       },
     });
@@ -51,10 +51,10 @@ window.addEventListener("load", () => {
       overlap: 0.2,
 
       listeners: {
-        dropactivate(event) {
-          event.target.classList.add("drop-active");
+        dropactivate(pEvent) {
+          pEvent.target.classList.add("drop-active");
         },
-        dragenter(event) {
+        dragenter(pEvent) {
           // var draggableElement = event.relatedTarget;
           // var dropzoneElement = event.target;
 
@@ -64,16 +64,16 @@ window.addEventListener("load", () => {
           // draggableElement.textContent = "Dragged in";
           console.log('dragged in');
         },
-        dragleave(event) {
+        dragleave(pEvent) {
           //remote the drop feedback style
           // event.target.classList.remove("drop-target");
           // event.relatedTarget.classList.remove("can-drop");
           // event.relatedTarget.textContent = "Dragged out";
           console.log('dragged out');
         },
-        drop(event) {
-          const droppedIcon = event.relatedTarget;
-          const dropzone    = event.target;
+        drop(pEvent) {
+          const droppedIcon = pEvent.relatedTarget;
+          const dropzone    = pEvent.target;
           const parentDiv   = dropzone.parentNode;
 
           var dropzoneId = dropzone.getAttribute('id');
@@ -89,10 +89,10 @@ window.addEventListener("load", () => {
             </svg>
           `;
         },
-        dropdeactivate(event) {
+        dropdeactivate(pEvent) {
           //remove active dropzone feedback
-          event.target.classList.remove("drop-active");
-          event.target.classList.remove("drop-target");
+          pEvent.target.classList.remove("drop-active");
+          pEvent.target.classList.remove("drop-target");
         },
       },
     });
