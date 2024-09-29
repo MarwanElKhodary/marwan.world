@@ -72,8 +72,15 @@ window.addEventListener("load", () => {
           console.log('dragged out');
         },
         drop(event) {
-          // event.relatedTarget.textContent = "Dropped";
-          console.log('dropped');
+          const droppedIcon = event.relatedTarget;
+          const dropzone    = event.target;
+
+          var dropzoneId = dropzone.getAttribute('id');
+          var label      = document.getElementById(dropzoneId + "-label");
+
+          droppedIcon.style.display = "none";
+          dropzone.style.display = "none";
+          label.style.display = "none";
         },
         dropdeactivate(event) {
           //remove active dropzone feedback
