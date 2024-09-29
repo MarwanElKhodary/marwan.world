@@ -1,5 +1,7 @@
 import interact from "interactjs";
 
+let currentAccept = "#cpu";
+
 // functions-----------------------------------------------------------------
 
 function dragMoveListener(pEvent) {
@@ -20,6 +22,14 @@ function dragMoveListener(pEvent) {
   target.setAttribute("data-y", y);
 
   target.style.cursor = "grabbing";
+}
+
+function setDropzoneAccept(pNewAccept) {
+  currentAccept = pNewAccept;
+  interact(".dropzone").dropzone({
+    accept: currentAccept,
+    overlap: 0.2
+  });
 }
 
 // event listeners-----------------------------------------------------------
@@ -47,7 +57,7 @@ window.addEventListener("load", () => {
   interact(".dropzone")
     .styleCursor(false)
     .dropzone({
-      accept: "#cpu", //TODO: Add logic for accepting different drops
+      accept: currentAccept, //TODO: Add logic for accepting different drops
       overlap: 0.2,
 
       listeners: {
