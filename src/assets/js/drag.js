@@ -1,5 +1,14 @@
 import interact from "interactjs";
 
+// constants-----------------------------------------------------------------
+
+const DATA_X = "data-x";
+const DATA_Y = "data-y";
+const NONE   = "none";
+const LABEL  = "-label";
+
+// global variables----------------------------------------------------------
+
 let currentAccept = "#cpu";
 
 // functions-----------------------------------------------------------------
@@ -7,19 +16,19 @@ let currentAccept = "#cpu";
 function dragMoveListener(pEvent) {
   var target   = pEvent.target;
   var dataName = target.getAttribute('data-name');
-  var label    = document.getElementById(dataName + "-label");
-  label.style.display = "none";
+  var label    = document.getElementById(dataName + LABEL);
+  label.style.display = NONE;
 
   //keep the dragged position in the data-x/data-y attributes
-  var x = (parseFloat(target.getAttribute("data-x")) || 0) + pEvent.dx;
-  var y = (parseFloat(target.getAttribute("data-y")) || 0) + pEvent.dy;
+  var x = (parseFloat(target.getAttribute(DATA_X)) || 0) + pEvent.dx;
+  var y = (parseFloat(target.getAttribute(DATA_Y)) || 0) + pEvent.dy;
 
   //translate the element
   target.style.transform = `translate(${x}px, ${y}px)`;
 
   //update the position attributes
-  target.setAttribute("data-x", x);
-  target.setAttribute("data-y", y);
+  target.setAttribute(DATA_X, x);
+  target.setAttribute(DATA_Y, y);
 
   target.style.cursor = "grabbing";
 }
@@ -87,11 +96,11 @@ window.addEventListener("load", () => {
           const parentDiv   = dropzone.parentNode;
 
           var dropzoneId = dropzone.getAttribute('id');
-          var label      = document.getElementById(dropzoneId + "-label");
+          var label      = document.getElementById(dropzoneId + LABEL);
 
-          droppedIcon.style.display = "none";
-          dropzone.style.display = "none";
-          label.style.display = "none";
+          droppedIcon.style.display = NONE;
+          dropzone.style.display = NONE;
+          label.style.display = NONE;
 
           parentDiv.innerHTML = `
             <svg class="text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
