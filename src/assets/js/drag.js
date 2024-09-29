@@ -9,7 +9,8 @@ const LABEL  = "-label";
 
 // global variables----------------------------------------------------------
 
-let currentAccept = "#cpu";
+let currentAccept   = "#cpu";
+let currentDropzone = "motherboard";
 
 // functions-----------------------------------------------------------------
 
@@ -54,6 +55,13 @@ window.addEventListener("load", () => {
     //   }),
     // ],
     listeners: {
+        start(pEvent) {
+          if (currentDropzone === "motherboard") {
+            setDropzoneAccept("#cpu");
+          } else if (currentDropzone == "cpu-on-motherboard") {
+            setDropzoneAccept("#cooler");
+          }
+        },
         move(pEvent) {
           dragMoveListener(pEvent);
         },
@@ -66,7 +74,7 @@ window.addEventListener("load", () => {
   interact(".dropzone")
     .styleCursor(false)
     .dropzone({
-      accept: currentAccept, //TODO: Add logic for accepting different drops
+      accept: currentAccept,
       overlap: 0.2,
 
       listeners: {
@@ -107,6 +115,7 @@ window.addEventListener("load", () => {
               <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>
           `;
+          // currentDropzone = "cpu-on-motherboard"; //set currentDropzone here
         },
         dropdeactivate(pEvent) {
           //remove active dropzone feedback
