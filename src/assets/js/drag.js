@@ -2,13 +2,15 @@ import interact from "interactjs";
 
 // constants-----------------------------------------------------------------
 
-const DATA_X      = "data-x";
-const DATA_Y      = "data-y";
-const NONE        = "none";
-const LABEL       = "-label";
-const MOTHERBOARD = "motherboard";
+const DATA_X             = "data-x";
+const DATA_Y             = "data-y";
+const NONE               = "none";
+const LABEL              = "-label";
+const MOTHERBOARD        = "motherboard";
+const CPU_ON_MOTHERBOARD = "cpu-on-motherboard";
 
-const DZ_CPU = "#cpu";
+const DZ_CPU    = "#cpu";
+const DZ_COOLER = '#cooler';
 
 // global variables----------------------------------------------------------
 
@@ -61,8 +63,8 @@ window.addEventListener("load", () => {
         start(pEvent) {
           if (currentDropzone === MOTHERBOARD) {
             setDropzoneAccept(DZ_CPU);
-          } else if (currentDropzone == "cpu-on-motherboard") {
-            setDropzoneAccept("#cooler");
+          } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
+            setDropzoneAccept(DZ_COOLER);
           }
         },
         move(pEvent) {
