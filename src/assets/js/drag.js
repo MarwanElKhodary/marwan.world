@@ -83,9 +83,10 @@ window.addEventListener("load", () => {
       overlap: 0.2,
 
       listeners: {
-        dropactivate(pEvent) {
-          pEvent.target.classList.add("drop-active");
-        },
+        // dropactivate(pEvent) {
+        //   // pEvent.target.classList.add("drop-active");
+        //   // console.log('dropactivate | pEvent.target: ', pEvent.target);
+        // },
         dragenter(pEvent) {
           // var draggableElement = event.relatedTarget;
           // var dropzoneElement = event.target;
@@ -116,17 +117,17 @@ window.addEventListener("load", () => {
           label.style.display = NONE;
 
           parentDiv.innerHTML = `
-            <svg class="text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
+            <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
               <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>
           `;
-          // currentDropzone = "cpu-on-motherboard"; //set currentDropzone here
+          currentDropzone = CPU_ON_MOTHERBOARD; //set currentDropzone here
         },
-        dropdeactivate(pEvent) {
-          //remove active dropzone feedback
-          pEvent.target.classList.remove("drop-active");
-          pEvent.target.classList.remove("drop-target");
-        },
+        // dropdeactivate(pEvent) {
+        //   //remove active dropzone feedback
+        //   // pEvent.target.classList.remove("drop-active");
+        //   // pEvent.target.classList.remove("drop-target");
+        // },
       },
     });
 });
