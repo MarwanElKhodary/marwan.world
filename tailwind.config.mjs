@@ -27,6 +27,9 @@ export default {
 				futuraBold: ['"Futura PT Bold"', 'sans-serif'],
 				futuraExtraBold: ['"Futura PT Extra Bold"', 'sans-serif'],
 			},
+			strokeWidth: {
+				'3': '3px',
+			}
 		},
 	},
 	plugins: [require("@tailwindcss/typography")],
