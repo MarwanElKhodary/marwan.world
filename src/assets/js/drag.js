@@ -6,7 +6,7 @@ function dragMoveListener(event) {
   var target   = event.target;
   var dataName = target.getAttribute('data-name');
   var label    = document.getElementById(dataName + "-label");
-  label.style.visibility = "hidden";
+  label.style.display = "none";
 
   //keep the dragged position in the data-x/data-y attributes
   var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
