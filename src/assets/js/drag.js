@@ -10,13 +10,13 @@ const MOTHERBOARD         = "motherboard";
 const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
 const CASE                = "case";
 
-const DZ_CPU           = "#cpu";
-const DZ_COOLER        = "#cooler";
-const DZ_COOLER_ON_CPU = "#cooler-on-cpu";
+const DZ_ACCEPT_CPU           = "#cpu";
+const DZ_ACCEPT_COOLER        = "#cooler";
+const DZ_ACCEPT_COOLER_ON_CPU = "#cooler-on-cpu";
 
 // global variables----------------------------------------------------------
 
-let currentAccept   = DZ_CPU;
+let currentAccept   = DZ_ACCEPT_CPU;
 let currentDropzone = MOTHERBOARD;
 
 // functions-----------------------------------------------------------------
@@ -83,11 +83,11 @@ window.addEventListener("load", () => {
     listeners: {
         start(pEvent) {
           if (currentDropzone === MOTHERBOARD) {
-            setDropzoneAccept(DZ_CPU);
+            setDropzoneAccept(DZ_ACCEPT_CPU);
           } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
-            setDropzoneAccept(DZ_COOLER);
+            setDropzoneAccept(DZ_ACCEPT_COOLER);
           } else if (currentDropzone === CASE) {
-            setDropzoneAccept(DZ_COOLER_ON_CPU);
+            setDropzoneAccept(DZ_ACCEPT_COOLER_ON_CPU);
           }
         },
         move(pEvent) {
