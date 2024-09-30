@@ -47,7 +47,7 @@ function getDropzoneContent() {
               <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>`;
   } else if (currentDropzone === CPU_ON_MOTHERBOARD){
-    return `<svg class ="text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
+    return `<svg class ="z-40 drag-drop hover:cursor-grab text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
               <use href="/src/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
             </svg>`;
   }
