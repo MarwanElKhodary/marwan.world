@@ -2,15 +2,17 @@ import interact from "interactjs";
 
 // constants-----------------------------------------------------------------
 
-const DATA_X             = "data-x";
-const DATA_Y             = "data-y";
-const NONE               = "none";
-const LABEL              = "-label";
-const MOTHERBOARD        = "motherboard";
-const CPU_ON_MOTHERBOARD = "cpu-on-motherboard";
+const DATA_X              = "data-x";
+const DATA_Y              = "data-y";
+const NONE                = "none";
+const LABEL               = "-label";
+const MOTHERBOARD         = "motherboard";
+const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
+const MOTHERBOARD_IN_CASE = "motherboard-in-case";
 
 const DZ_CPU    = "#cpu";
-const DZ_COOLER = '#cooler';
+const DZ_COOLER = "#cooler";
+const DZ_CASE   = "#case";
 
 // global variables----------------------------------------------------------
 
@@ -21,7 +23,7 @@ let currentDropzone = MOTHERBOARD;
 
 function dragMoveListener(pEvent) {
   var target   = pEvent.target;
-  var dataName = target.getAttribute('data-name');
+  var dataName = target.getAttribute("data-name");
   var label    = document.getElementById(dataName + LABEL);
 
   label ? label.style.display = NONE : null;
@@ -109,21 +111,21 @@ window.addEventListener("load", () => {
           // dropzoneElement.classList.add("drop-target");
           // draggableElement.classList.add("can-drop");
           // draggableElement.textContent = "Dragged in";
-          console.log('dragged in');
+          console.log("dragged in");
         },
         dragleave(pEvent) {
           //remote the drop feedback style
           // event.target.classList.remove("drop-target");
           // event.relatedTarget.classList.remove("can-drop");
           // event.relatedTarget.textContent = "Dragged out";
-          console.log('dragged out');
+          console.log("dragged out");
         },
         drop(pEvent) {
           const droppedIcon = pEvent.relatedTarget;
           const dropzone    = pEvent.target;
           const parentDiv   = dropzone.parentNode;
 
-          var dropzoneId = dropzone.getAttribute('id');
+          var dropzoneId = dropzone.getAttribute("id");
           var label      = document.getElementById(dropzoneId + LABEL);
 
           droppedIcon.style.display   = NONE;
