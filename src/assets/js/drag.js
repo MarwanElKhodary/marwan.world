@@ -23,7 +23,8 @@ function dragMoveListener(pEvent) {
   var target   = pEvent.target;
   var dataName = target.getAttribute('data-name');
   var label    = document.getElementById(dataName + LABEL);
-  label.style.display = NONE;
+
+  label ? label.style.display = NONE : null;
 
   //keep the dragged position in the data-x/data-y attributes
   var x = (parseFloat(target.getAttribute(DATA_X)) || 0) + pEvent.dx;
