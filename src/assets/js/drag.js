@@ -8,11 +8,11 @@ const NONE                = "none";
 const LABEL               = "-label";
 const MOTHERBOARD         = "motherboard";
 const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
-const MOTHERBOARD_IN_CASE = "motherboard-in-case";
+const CASE                = "case";
 
-const DZ_CPU    = "#cpu";
-const DZ_COOLER = "#cooler";
-const DZ_CASE   = "#case";
+const DZ_CPU           = "#cpu";
+const DZ_COOLER        = "#cooler";
+const DZ_COOLER_ON_CPU = "#cooler-on-cpu";
 
 // global variables----------------------------------------------------------
 
@@ -48,9 +48,14 @@ function getDropzoneContent() {
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
               <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>`;
-  } else if (currentDropzone === CPU_ON_MOTHERBOARD){
+  } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
+    currentDropzone = CASE;
     return `<svg class ="z-40 drag-drop hover:cursor-grab text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
               <use href="/src/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
+            </svg>`;
+  } else if (currentDropzone === CASE) {
+    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
+              <use href="/src/svg/motherboard-in-case.svg#motherboard-in-case"></use>
             </svg>`;
   }
 }
@@ -81,6 +86,8 @@ window.addEventListener("load", () => {
             setDropzoneAccept(DZ_CPU);
           } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
             setDropzoneAccept(DZ_COOLER);
+          } else if (currentDropzone === CASE) {
+            setDropzoneAccept(DZ_COOLER_ON_CPU);
           }
         },
         move(pEvent) {
