@@ -39,6 +39,19 @@ function dragMoveListener(pEvent) {
   target.style.cursor = "grabbing";
 }
 
+function getDropzoneContent() {
+  if (currentDropzone === MOTHERBOARD) {
+    currentDropzone = CPU_ON_MOTHERBOARD;
+    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
+              <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
+            </svg>`;
+  } else if (currentDropzone === CPU_ON_MOTHERBOARD){
+    return `<svg class ="text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
+              <use href="/src/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
+            </svg>`;
+  }
+}
+
 function setDropzoneAccept(pNewAccept) {
   currentAccept = pNewAccept;
   interact(".dropzone").dropzone({
@@ -112,16 +125,11 @@ window.addEventListener("load", () => {
           var dropzoneId = dropzone.getAttribute('id');
           var label      = document.getElementById(dropzoneId + LABEL);
 
-          droppedIcon.style.display = NONE;
-          dropzone.style.display = NONE;
-          label.style.display = NONE;
+          droppedIcon.style.display   = NONE;
+          dropzone.style.display      = NONE;
+          label ? label.style.display = NONE : null;
 
-          parentDiv.innerHTML = `
-            <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
-              <use href="/src/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
-            </svg>
-          `;
-          currentDropzone = CPU_ON_MOTHERBOARD; //set currentDropzone here
+          parentDiv.innerHTML = getDropzoneContent();
         },
         // dropdeactivate(pEvent) {
         //   //remove active dropzone feedback
