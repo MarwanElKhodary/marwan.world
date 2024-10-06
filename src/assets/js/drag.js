@@ -10,13 +10,16 @@ const MOTHERBOARD         = "motherboard";
 const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
 const CASE                = "case";
 const COOLER_ON_CPU       = "cooler-on-cpu";
-const MOTHERBOARD_IN_CASE = "motherboard-in-case"
+const MOTHERBOARD_IN_CASE = "motherboard-in-case";
+const GPU_IN_CASE         = "gpu-in-case";
+const HDD_IN_CASE         = "hdd-in-case";
 
 const DZ_ACCEPT_CPU                = "#cpu";
 const DZ_ACCEPT_COOLER             = "#cooler";
 const DZ_ACCEPT_RAM                = "#ram";
 const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
 const DZ_ACCEPT_GPU                = "#gpu";
+const DZ_ACCEPT_HDD                = "#hdd";
 
 // global variables----------------------------------------------------------
 
@@ -68,8 +71,14 @@ function getDropzoneContent() {
               <use href="/src/svg/motherboard-in-case.svg#motherboard-in-case"></use>
             </svg>`;
   } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
+    currentDropzone = GPU_IN_CASE;
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
               <use href="/src/svg/gpu-in-case.svg#gpu-in-case"></use>
+            </svg>`;
+  } else if (currentDropzone === GPU_IN_CASE) {
+    currentDropzone = HDD_IN_CASE;
+    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
+              <use href="/src/svg/hdd-in-case.svg#hdd-in-case"></use>
             </svg>`;
   }
 }
@@ -106,7 +115,9 @@ window.addEventListener("load", () => {
             setDropzoneAccept(DZ_ACCEPT_RAM_ON_MOTHERBOARD);
           } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
             setDropzoneAccept(DZ_ACCEPT_GPU);
-          }
+          } else if (currentDropzone === GPU_IN_CASE) {
+            setDropzoneAccept(DZ_ACCEPT_HDD);
+          } 
         },
         move(pEvent) {
           dragMoveListener(pEvent);
