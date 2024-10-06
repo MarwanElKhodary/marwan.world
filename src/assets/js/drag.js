@@ -2,24 +2,27 @@ import interact from "interactjs";
 
 // constants-----------------------------------------------------------------
 
-const DATA_X              = "data-x";
-const DATA_Y              = "data-y";
-const NONE                = "none";
-const LABEL               = "-label";
-const MOTHERBOARD         = "motherboard";
-const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
-const CASE                = "case";
-const COOLER_ON_CPU       = "cooler-on-cpu";
-const MOTHERBOARD_IN_CASE = "motherboard-in-case";
-const GPU_IN_CASE         = "gpu-in-case";
-const HDD_IN_CASE         = "hdd-in-case";
+const DATA_X   = "data-x";
+const DATA_Y   = "data-y";
+const NONE     = "none";
+const LABEL    = "-label";
+const DROPZONE = 'dropzone';         
 
-const DZ_ACCEPT_CPU                = "#cpu";
-const DZ_ACCEPT_COOLER             = "#cooler";
-const DZ_ACCEPT_RAM                = "#ram";
+const MOTHERBOARD   = "motherboard";
+const CASE          = "case";
+const COOLER_ON_CPU = "cooler-on-cpu";
+const GPU_IN_CASE   = "gpu-in-case";
+const HDD_IN_CASE   = "hdd-in-case";
+const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
+const MOTHERBOARD_IN_CASE = "motherboard-in-case";
+
+const DZ_ACCEPT_CPU    = "#cpu";
+const DZ_ACCEPT_CASE   = "#case";
+const DZ_ACCEPT_COOLER = "#cooler";
+const DZ_ACCEPT_RAM    = "#ram";
+const DZ_ACCEPT_GPU    = "#gpu";
+const DZ_ACCEPT_HDD    = "#hdd";
 const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
-const DZ_ACCEPT_GPU                = "#gpu";
-const DZ_ACCEPT_HDD                = "#hdd";
 
 // global variables----------------------------------------------------------
 
@@ -63,11 +66,11 @@ function getDropzoneContent() {
   } else if (currentDropzone === COOLER_ON_CPU) {
     currentDropzone = CASE;
 
-    const caseElement = document.querySelector('#case');
-    if (caseElement && !caseElement.classList.contains('dropzone')) {
-      caseElement.classList.add('dropzone');
+    const caseElement = document.querySelector(DZ_ACCEPT_CASE);
+    if (caseElement && !caseElement.classList.contains(DROPZONE)) {
+      caseElement.classList.add(DROPZONE);
     }
-    
+
     return `<svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
               <use href="/src/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
             </svg>`;
