@@ -67,9 +67,7 @@ function getDropzoneContent() {
     currentDropzone = CASE;
 
     const caseElement = document.querySelector(DZ_ACCEPT_CASE);
-    if (caseElement && !caseElement.classList.contains(DROPZONE)) {
-      caseElement.classList.add(DROPZONE);
-    }
+    caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
 
     return `<svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
               <use href="/src/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
