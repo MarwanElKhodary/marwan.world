@@ -11,10 +11,10 @@ const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
 const CASE                = "case";
 const COOLER_ON_CPU       = "cooler-on-cpu";
 
-const DZ_ACCEPT_CPU           = "#cpu";
-const DZ_ACCEPT_COOLER        = "#cooler";
-const DZ_ACCEPT_COOLER_ON_CPU = "#cooler-on-cpu";
-const DZ_ACCEPT_RAM           = "#ram";
+const DZ_ACCEPT_CPU                = "#cpu";
+const DZ_ACCEPT_COOLER             = "#cooler";
+const DZ_ACCEPT_RAM                = "#ram";
+const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
 
 // global variables----------------------------------------------------------
 
@@ -60,12 +60,11 @@ function getDropzoneContent() {
     return `<svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
               <use href="/src/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
             </svg>`;
+  } else if (currentDropzone === CASE) {
+    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
+              <use href="/src/svg/motherboard-in-case.svg#motherboard-in-case"></use>
+            </svg>`;
   }
-  // } else if (currentDropzone === CASE) {
-  //   return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
-  //             <use href="/src/svg/motherboard-in-case.svg#motherboard-in-case"></use>
-  //           </svg>`;
-  // }
 }
 
 function setDropzoneAccept(pNewAccept) {
@@ -96,10 +95,9 @@ window.addEventListener("load", () => {
             setDropzoneAccept(DZ_ACCEPT_COOLER);
           } else if (currentDropzone === COOLER_ON_CPU) {
             setDropzoneAccept(DZ_ACCEPT_RAM);
+          } else if (currentDropzone === CASE) {
+            setDropzoneAccept(DZ_ACCEPT_RAM_ON_MOTHERBOARD);
           }
-          // } else if (currentDropzone === CASE) {
-          //   setDropzoneAccept(DZ_ACCEPT_COOLER_ON_CPU);
-          // }
         },
         move(pEvent) {
           dragMoveListener(pEvent);
