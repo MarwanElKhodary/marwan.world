@@ -117,20 +117,30 @@ window.addEventListener("load", () => {
     // ],
     listeners: {
         start(pEvent) {
-          if (currentDropzone === MOTHERBOARD) {
-            setDropzoneAccept(DZ_ACCEPT_CPU);
-          } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
-            setDropzoneAccept(DZ_ACCEPT_COOLER);
-          } else if (currentDropzone === COOLER_ON_CPU) {
-            setDropzoneAccept(DZ_ACCEPT_RAM);
-          } else if (currentDropzone === CASE) {
-            setDropzoneAccept(DZ_ACCEPT_RAM_ON_MOTHERBOARD);
-          } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
-            setDropzoneAccept(DZ_ACCEPT_GPU);
-          } else if (currentDropzone === GPU_IN_CASE) {
-            setDropzoneAccept(DZ_ACCEPT_HDD);
-          } else if (currentDropzone === HDD_IN_CASE) {
-            setDropzoneAccept(DZ_ACCEPT_PSU);
+          switch (currentDropzone) {
+            case MOTHERBOARD:
+              setDropzoneAccept(DZ_ACCEPT_CPU);
+              break;
+            case CPU_ON_MOTHERBOARD:
+              setDropzoneAccept(DZ_ACCEPT_COOLER);
+              break;
+            case COOLER_ON_CPU:
+              setDropzoneAccept(DZ_ACCEPT_RAM);
+              break;
+            case CASE:
+              setDropzoneAccept(DZ_ACCEPT_RAM_ON_MOTHERBOARD);
+              break;
+            case MOTHERBOARD_IN_CASE:
+              setDropzoneAccept(DZ_ACCEPT_GPU);
+              break;
+            case GPU_IN_CASE:
+              setDropzoneAccept(DZ_ACCEPT_HDD);
+              break;
+            case HDD_IN_CASE:
+              setDropzoneAccept(DZ_ACCEPT_PSU);
+              break;
+            default:
+              break;
           }
         },
         move(pEvent) {
