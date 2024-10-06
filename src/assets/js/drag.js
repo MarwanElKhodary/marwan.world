@@ -22,6 +22,7 @@ const DZ_ACCEPT_COOLER = "#cooler";
 const DZ_ACCEPT_RAM    = "#ram";
 const DZ_ACCEPT_GPU    = "#gpu";
 const DZ_ACCEPT_HDD    = "#hdd";
+const DZ_ACCEPT_PSU    = "#psu";
 const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
 
 // global variables----------------------------------------------------------
@@ -87,6 +88,10 @@ function getDropzoneContent() {
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
               <use href="/src/svg/hdd-in-case.svg#hdd-in-case"></use>
             </svg>`;
+  } else if (currentDropzone === HDD_IN_CASE) {
+    return `<svg class="z-40 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
+              <use href="/src/svg/psu-in-case.svg#psu-in-case"></use>
+            </svg>`;
   }
 }
 
@@ -124,7 +129,9 @@ window.addEventListener("load", () => {
             setDropzoneAccept(DZ_ACCEPT_GPU);
           } else if (currentDropzone === GPU_IN_CASE) {
             setDropzoneAccept(DZ_ACCEPT_HDD);
-          } 
+          } else if (currentDropzone === HDD_IN_CASE) {
+            setDropzoneAccept(DZ_ACCEPT_PSU);
+          }
         },
         move(pEvent) {
           dragMoveListener(pEvent);
