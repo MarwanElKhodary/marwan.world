@@ -13,6 +13,7 @@ const CASE          = "case";
 const COOLER_ON_CPU = "cooler-on-cpu";
 const GPU_IN_CASE   = "gpu-in-case";
 const HDD_IN_CASE   = "hdd-in-case";
+const MONITOR_OFF   = "monitor-off";
 const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
 const MOTHERBOARD_IN_CASE = "motherboard-in-case";
 
@@ -171,14 +172,14 @@ window.addEventListener("load", () => {
           // dropzoneElement.classList.add("drop-target");
           // draggableElement.classList.add("can-drop");
           // draggableElement.textContent = "Dragged in";
-          console.log("dragged in");
+          // console.log("dragged in");
         },
         dragleave(pEvent) {
           //remote the drop feedback style
           // event.target.classList.remove("drop-target");
           // event.relatedTarget.classList.remove("can-drop");
           // event.relatedTarget.textContent = "Dragged out";
-          console.log("dragged out");
+          // console.log("dragged out");
         },
         drop(pEvent) {
           const droppedIcon = pEvent.relatedTarget;
@@ -193,6 +194,18 @@ window.addEventListener("load", () => {
           label ? label.style.display = NONE : null;
 
           parentDiv.innerHTML = getDropzoneContent();
+
+          if (dropzoneId === HDD_IN_CASE) {
+            setTimeout(() => {
+              const monitorOff = document.getElementById(MONITOR_OFF);
+              const monitorOn = `<svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full" id="monitor-on">
+                                  <use href="/src/svg/monitor-on.svg#monitor-on"></use>
+                                </svg>`;
+              
+              monitorOff.outerHTML = monitorOn;
+            }, 2000);
+          }
+
         },
         // dropdeactivate(pEvent) {
         //   //remove active dropzone feedback
