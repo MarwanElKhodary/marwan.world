@@ -21,7 +21,7 @@
     font-family: 'Futura PT Medium';
     font-style: normal;
     font-weight: normal;
-    src: local('Futura PT Medium'), url('fonts/FuturaCyrillicMedium.woff') format('woff');
+    src: local('Futura PT Medium'), url('/fonts/FuturaCyrillicMedium.woff') format('woff');
   }
 
   @font-face {
