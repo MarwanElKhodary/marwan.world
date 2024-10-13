@@ -5,7 +5,7 @@ dateFormatted: 18 June 2024
 wordCount: 590 words
 readingTime: 4 min
 ---
-![Front end view of a posted inline image](/assets/images/posts/frontendViewOfInlineImagePost.png)
+![Front end view of a posted inline image](/posts/processing-inline-images-in-salesforce/frontendViewOfInlineImagePost.png)
 
 There aren't a lot of great tutorials about how the `<lightning-input-rich-text>` element takes an user-uploaded inline image and how to handle the image in Apex such that you can use the image. 
 
