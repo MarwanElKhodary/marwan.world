@@ -58,12 +58,12 @@ function getDropzoneContent() {
   if (currentDropzone === MOTHERBOARD) {
     currentDropzone = CPU_ON_MOTHERBOARD;
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
-              <use href="/public/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
+              <use href="/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>`;
   } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
     currentDropzone = COOLER_ON_CPU;
     return `<svg class ="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
-              <use href="/public/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
+              <use href="/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
             </svg>`;
   } else if (currentDropzone === COOLER_ON_CPU) {
     currentDropzone = CASE;
@@ -72,26 +72,26 @@ function getDropzoneContent() {
     caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
 
     return `<svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
-              <use href="/public/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
+              <use href="/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
             </svg>`;
   } else if (currentDropzone === CASE) {
     currentDropzone = MOTHERBOARD_IN_CASE;
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
-              <use href="/public/svg/motherboard-in-case.svg#motherboard-in-case"></use>
+              <use href="/svg/motherboard-in-case.svg#motherboard-in-case"></use>
             </svg>`;
   } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
     currentDropzone = GPU_IN_CASE;
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
-              <use href="/public/svg/gpu-in-case.svg#gpu-in-case"></use>
+              <use href="/svg/gpu-in-case.svg#gpu-in-case"></use>
             </svg>`;
   } else if (currentDropzone === GPU_IN_CASE) {
     currentDropzone = HDD_IN_CASE;
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
-              <use href="/public/svg/hdd-in-case.svg#hdd-in-case"></use>
+              <use href="/svg/hdd-in-case.svg#hdd-in-case"></use>
             </svg>`;
   } else if (currentDropzone === HDD_IN_CASE) {
     return `<svg class="z-40 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
-              <use href="/public/svg/psu-in-case.svg#psu-in-case"></use>
+              <use href="/svg/psu-in-case.svg#psu-in-case"></use>
             </svg>`;
   }
 }
@@ -199,7 +199,7 @@ window.addEventListener("load", () => {
             setTimeout(() => {
               const monitorOff = document.getElementById(MONITOR_OFF);
               const monitorOn = `<svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full" id="monitor-on">
-                                  <use href="/public/svg/monitor-on.svg#monitor-on"></use>
+                                  <use href="/svg/monitor-on.svg#monitor-on"></use>
                                 </svg>`;
               
               monitorOff.outerHTML = monitorOn;
