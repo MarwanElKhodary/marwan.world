@@ -2,13 +2,13 @@
 	{
 		"name": "copyfoldertree",
 		"description": "Simplify copying your VS Code folder structure to text",
-		"image": "/assets/images/projects/copyfoldertree.png",
+		"image": "/projects/copyfoldertree.png",
 		"url": "https://github.com/MarwanElKhodary/copyfoldertree"
 	},
 	{
 		"name": "Netzero",
 		"description": "Sustainability app that helps Queen's students track their carbon footprint",
-		"image": "/assets/images/projects/netzero.PNG",
+		"image": "/projects/netzero.PNG",
 		"url": "https://kickercna.ca/2020/11/03/new-sustainability-app-fills-gap-in-carbon-tracking/"
 	}
 ]
