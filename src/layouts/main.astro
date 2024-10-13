@@ -24,7 +24,7 @@ const { title } = Astro.props;
     />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/MarwanElKhodary/marwan.world/aa454def2a100c649e34086048f1df76720c28c1/public/assets/images/open_graph_resized.png"
+      content="https://marwan.world/website-preview.png"
     />
 
     <!-- Twitter Meta Tags -->
@@ -38,14 +38,14 @@ const { title } = Astro.props;
     />
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/MarwanElKhodary/marwan.world/aa454def2a100c649e34086048f1df76720c28c1/public/assets/images/open_graph_resized.png"
+      content="https://marwan.world/website-preview.png"
     />
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
   <body class="antialiased bg-cream dark:bg-rock">
