@@ -100,7 +100,6 @@ But yeah, send that input wrapper to Apex.
 ## Apex (callThisFileWhateverYouWant.cls)
 
 ```apex
-
 public class InputWrapper {
     public String inputObj { get; set; }
 }
