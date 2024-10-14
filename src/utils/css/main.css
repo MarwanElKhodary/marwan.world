@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.light .astro-code,
+.light .astro-code span {
+  background-color: var(--shiki-light-bg) !important;
+  color: var(--shiki-light) !important;
+}
+
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
 @layer base{
   @font-face {
     font-family: 'Futura PT Book';
