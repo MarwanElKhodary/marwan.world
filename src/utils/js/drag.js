@@ -85,7 +85,7 @@ function getDropzoneContent() {
 
     case MOTHERBOARD_IN_CASE:
       currentDropzone         = GPU_IN_CASE;
-      instruction.textContent = instructions.ADD_GPU;
+      instruction.textContent = instructions.ADD_HDD;
       return svgElements.GPU_IN_CASE;
 
     case GPU_IN_CASE:
