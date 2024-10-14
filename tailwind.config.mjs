@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 export default {
 	darkMode: "class",
@@ -32,5 +33,13 @@ export default {
 			}
 		},
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [
+		require("@tailwindcss/typography"),
+		plugin(function ({addVariant}) {
+			addVariant(
+				'prose-inline-code',
+				'&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *))'
+			);
+		})
+	],
 };
