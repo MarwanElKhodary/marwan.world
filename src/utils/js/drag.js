@@ -1,4 +1,5 @@
 import interact from "interactjs";
+import { instructions, svgElements } from "./content";
 
 // constants-----------------------------------------------------------------
 
@@ -59,49 +60,35 @@ function getDropzoneContent() {
 
   if (currentDropzone === MOTHERBOARD) {
     currentDropzone         = CPU_ON_MOTHERBOARD;
-    instruction.textContent = 'Great! Now you can add the Cooler on top of the CPU in the Motherboard';
-    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
-              <use href="/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
-            </svg>`;
+    instruction.textContent = instructions.ADD_COOLER;
+    return svgElements.CPU_ON_MOTHERBOARD;
   } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
     currentDropzone         = COOLER_ON_CPU;
-    instruction.textContent = 'Last thing for the Motherboard is to add the RAM';
-    return `<svg class ="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
-              <use href="/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
-            </svg>`;
+    instruction.textContent = instructions.ADD_RAM;
+    return svgElements.COOLER_ON_CPU;
   } else if (currentDropzone === COOLER_ON_CPU) {
     currentDropzone         = CASE;
-    instruction.textContent = 'Now you can insert the Motherboard in the Case!';
+    instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
 
     const caseElement = document.querySelector(DZ_ACCEPT_CASE);
     caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
 
-    return `<svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
-              <use href="/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
-            </svg>`;
+    return svgElements.RAM_ON_MOTHERBOARD;
   } else if (currentDropzone === CASE) {
     currentDropzone         = MOTHERBOARD_IN_CASE;
-    instruction.textContent = 'Now we can start building in the case. Insert the GPU underneath the Motherboard';
-    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
-              <use href="/svg/motherboard-in-case.svg#motherboard-in-case"></use>
-            </svg>`;
+    instruction.textContent = instructions.ADD_GPU;
+    return svgElements.MOTHERBOARD_IN_CASE;
   } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
     currentDropzone         = GPU_IN_CASE;
-    instruction.textContent = 'Hard Drive next.'
-    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
-              <use href="/svg/gpu-in-case.svg#gpu-in-case"></use>
-            </svg>`;
+    instruction.textContent = instructions.ADD_GPU;
+    return svgElements.GPU_IN_CASE;
   } else if (currentDropzone === GPU_IN_CASE) {
     currentDropzone = HDD_IN_CASE;
-    instruction.textContent = 'Last step! Fit the Power Supply in the Case so we can turn the PC on!';
-    return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
-              <use href="/svg/hdd-in-case.svg#hdd-in-case"></use>
-            </svg>`;
+    instruction.textContent = instructions.ADD_PSU;
+    return svgElements.HDD_IN_CASE;
   } else if (currentDropzone === HDD_IN_CASE) {
-    instruction.textContent = 'Congratulations! You just built your first PC!';
-    return `<svg class="z-40 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
-              <use href="/svg/psu-in-case.svg#psu-in-case"></use>
-            </svg>`;
+    instruction.textContent = instructions.CONGRATS;
+    return svgElements.PSU_IN_CASE;
   }
 }
 
@@ -207,9 +194,7 @@ window.addEventListener("load", () => {
           if (dropzoneId === HDD_IN_CASE) {
             setTimeout(() => {
               const monitorOff = document.getElementById(MONITOR_OFF);
-              const monitorOn = `<svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full" id="monitor-on">
-                                  <use href="/svg/monitor-on.svg#monitor-on"></use>
-                                </svg>`;
+              const monitorOn  = svgElements.MONITOR_ON;
               
               monitorOff.outerHTML = monitorOn;
             }, 1000);
