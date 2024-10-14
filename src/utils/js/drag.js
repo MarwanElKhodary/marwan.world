@@ -55,18 +55,23 @@ function dragMoveListener(pEvent) {
 }
 
 function getDropzoneContent() {
+  const instruction = document.getElementById('instruction');
+
   if (currentDropzone === MOTHERBOARD) {
-    currentDropzone = CPU_ON_MOTHERBOARD;
+    currentDropzone         = CPU_ON_MOTHERBOARD;
+    instruction.textContent = 'Great! Now you can add the Cooler on top of the CPU in the Motherboard';
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
               <use href="/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
             </svg>`;
   } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
-    currentDropzone = COOLER_ON_CPU;
+    currentDropzone         = COOLER_ON_CPU;
+    instruction.textContent = 'Last thing for the Motherboard is to add the RAM';
     return `<svg class ="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
               <use href="/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
             </svg>`;
   } else if (currentDropzone === COOLER_ON_CPU) {
-    currentDropzone = CASE;
+    currentDropzone         = CASE;
+    instruction.textContent = 'Now you can insert the Motherboard in the Case!';
 
     const caseElement = document.querySelector(DZ_ACCEPT_CASE);
     caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
@@ -75,21 +80,25 @@ function getDropzoneContent() {
               <use href="/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
             </svg>`;
   } else if (currentDropzone === CASE) {
-    currentDropzone = MOTHERBOARD_IN_CASE;
+    currentDropzone         = MOTHERBOARD_IN_CASE;
+    instruction.textContent = 'Now we can start building in the case. Insert the GPU underneath the Motherboard';
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
               <use href="/svg/motherboard-in-case.svg#motherboard-in-case"></use>
             </svg>`;
   } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
-    currentDropzone = GPU_IN_CASE;
+    currentDropzone         = GPU_IN_CASE;
+    instruction.textContent = 'Hard Drive next.'
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
               <use href="/svg/gpu-in-case.svg#gpu-in-case"></use>
             </svg>`;
   } else if (currentDropzone === GPU_IN_CASE) {
     currentDropzone = HDD_IN_CASE;
+    instruction.textContent = 'Last step! Fit the Power Supply in the Case so we can turn the PC on!';
     return `<svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
               <use href="/svg/hdd-in-case.svg#hdd-in-case"></use>
             </svg>`;
   } else if (currentDropzone === HDD_IN_CASE) {
+    instruction.textContent = 'Congratulations! You just built your first PC!';
     return `<svg class="z-40 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
               <use href="/svg/psu-in-case.svg#psu-in-case"></use>
             </svg>`;
