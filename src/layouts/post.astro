@@ -4,36 +4,20 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <main
-    class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-cream dark:bg-rock md:rounded-t-md text-rock dark:text-cream"
-  >
-    <div
-      class="relative flex flex-col px-5 pt-6 md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-gasoline dark:border-cream"
-    >
-      <div
-        class="absolute top-0 left-0 hidden w-px h-full mt-1 -translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"
-      >
-      </div>
-      <div
-        class="absolute top-0 right-0 hidden w-px h-full mt-1 translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"
-      >
-      </div>
-      <h1
-        class="w-full max-w-2xl mx-auto font-futuraExtraBold leading-tight tracking-tight text-left md:mb-12 md:text-4xl text-rock dark:text-gasoline lg:text-5xl md:leading-none"
-      >
+  <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-cream dark:bg-rock md:rounded-t-md text-rock dark:text-cream">
+    <div class="relative flex flex-col px-5 pt-6 md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-gasoline dark:border-cream">
+      <div class="absolute top-0 left-0 hidden w-px h-full mt-1 -translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"></div>
+      <div class="absolute top-0 right-0 hidden w-px h-full mt-1 translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"></div>
+      <h1 class="w-full max-w-2xl mx-auto font-futuraExtraBold leading-tight tracking-tight text-left md:mb-12 md:text-4xl text-rock dark:text-gasoline lg:text-5xl md:leading-none">
         {frontmatter.title}
       </h1>
-      <div
-        class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 font-normal text-grey dark:text-neutral-400"
-      >
+      <div class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 font-normal text-grey dark:text-neutral-400">
         <p>{frontmatter.dateFormatted}</p>
         <p>{frontmatter.wordCount}</p>
         <p>{frontmatter.readingTime}</p>
       </div>
     </div>
-    <article
-      class="w-full max-w-2xl font-futuraMedium text-rock dark:text-cream mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
-    >
+    <article class="w-full max-w-2xl font-futuraMedium text-rock dark:text-cream mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert">
       <slot />
     </article>
   </main>
