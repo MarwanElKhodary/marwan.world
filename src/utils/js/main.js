@@ -16,6 +16,7 @@ let headerElement = null;
 
 document.addEventListener("DOMContentLoaded", () => {
 	headerElement = document.getElementById("header");
+	window.darkMode = true;
 
 	if (
 		localStorage.getItem("dark_mode") &&
