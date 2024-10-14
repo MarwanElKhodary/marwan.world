@@ -203,7 +203,7 @@ window.addEventListener("load", () => {
                                 </svg>`;
               
               monitorOff.outerHTML = monitorOn;
-            }, 2000);
+            }, 1000);
           }
 
         },
