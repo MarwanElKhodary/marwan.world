@@ -39,7 +39,7 @@ import Icon from "../components/icon.astro";
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="relative grid grid-cols-3 h-full mp:gap-1 xl:gap-12 xl:w-1/2 2xl:w-2/3 touch-none">
+    <div class="relative grid grid-cols-3 h-full mp:gap-1 xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none">
       <Icon 
         pLabel="motherboard-label" 
         pLabelClass="absolute text-rock dark:text-gasoline fill-current size-4/12 select-none"
@@ -58,6 +58,11 @@ import Icon from "../components/icon.astro";
         pPart="hdd"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/6"
       />
+      <div class="col-span-3 flex items-center justify-center">
+        <p class="select-none font-futuraDemi text-xs xl:text-lg text-decoration-line: underline py-5 xl:py-0 text-opacity-50 dark:text-opacity-50 text-center text-rock dark:text-gasoline">
+          To start, drag the CPU onto the Motherboard
+        </p>
+      </div>
       <Icon 
         pLabel="case-label" 
         pLabelClass="absolute text-rock dark:text-gasoline fill-current size-5/12 mp:size-4/12 sm:size-5/12 xl:size-4/12 2xl:size-5/12 select-none"
