@@ -58,37 +58,47 @@ function dragMoveListener(pEvent) {
 function getDropzoneContent() {
   const instruction = document.getElementById('instruction');
 
-  if (currentDropzone === MOTHERBOARD) {
-    currentDropzone         = CPU_ON_MOTHERBOARD;
-    instruction.textContent = instructions.ADD_COOLER;
-    return svgElements.CPU_ON_MOTHERBOARD;
-  } else if (currentDropzone === CPU_ON_MOTHERBOARD) {
-    currentDropzone         = COOLER_ON_CPU;
-    instruction.textContent = instructions.ADD_RAM;
-    return svgElements.COOLER_ON_CPU;
-  } else if (currentDropzone === COOLER_ON_CPU) {
-    currentDropzone         = CASE;
-    instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
+  switch (currentDropzone) {
+    case MOTHERBOARD:
+      currentDropzone         = CPU_ON_MOTHERBOARD;
+      instruction.textContent = instructions.ADD_COOLER;
+      return svgElements.CPU_ON_MOTHERBOARD;
 
-    const caseElement = document.querySelector(DZ_ACCEPT_CASE);
-    caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
+    case CPU_ON_MOTHERBOARD:
+      currentDropzone         = COOLER_ON_CPU;
+      instruction.textContent = instructions.ADD_RAM;
+      return svgElements.COOLER_ON_CPU;
 
-    return svgElements.RAM_ON_MOTHERBOARD;
-  } else if (currentDropzone === CASE) {
-    currentDropzone         = MOTHERBOARD_IN_CASE;
-    instruction.textContent = instructions.ADD_GPU;
-    return svgElements.MOTHERBOARD_IN_CASE;
-  } else if (currentDropzone === MOTHERBOARD_IN_CASE) {
-    currentDropzone         = GPU_IN_CASE;
-    instruction.textContent = instructions.ADD_GPU;
-    return svgElements.GPU_IN_CASE;
-  } else if (currentDropzone === GPU_IN_CASE) {
-    currentDropzone = HDD_IN_CASE;
-    instruction.textContent = instructions.ADD_PSU;
-    return svgElements.HDD_IN_CASE;
-  } else if (currentDropzone === HDD_IN_CASE) {
-    instruction.textContent = instructions.CONGRATS;
-    return svgElements.PSU_IN_CASE;
+    case COOLER_ON_CPU:
+      currentDropzone         = CASE;
+      instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
+
+      const caseElement = document.querySelector(DZ_ACCEPT_CASE);
+      caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
+
+      return svgElements.RAM_ON_MOTHERBOARD;
+
+    case CASE:
+      currentDropzone         = MOTHERBOARD_IN_CASE;
+      instruction.textContent = instructions.ADD_GPU;
+      return svgElements.MOTHERBOARD_IN_CASE;
+
+    case MOTHERBOARD_IN_CASE:
+      currentDropzone         = GPU_IN_CASE;
+      instruction.textContent = instructions.ADD_GPU;
+      return svgElements.GPU_IN_CASE;
+
+    case GPU_IN_CASE:
+      currentDropzone         = HDD_IN_CASE;
+      instruction.textContent = instructions.ADD_PSU;
+      return svgElements.HDD_IN_CASE;
+
+    case HDD_IN_CASE:
+      instruction.textContent = instructions.CONGRATS;
+      return svgElements.PSU_IN_CASE;
+
+    default:
+      return;
   }
 }
 
