@@ -6,9 +6,9 @@ const stickyClasses = ["fixed", "h-14"];
 const unstickyClasses = ["absolute", "h-20"];
 const stickyClassesContainer = [
 	"border-neutral-300/50",
-	"bg-white/80",
+	"bg-cream",
 	"dark:border-neutral-600/40",
-	"dark:bg-neutral-900/60",
+	"dark:bg-rock",
 	"backdrop-blur-2xl",
 ];
 const unstickyClassesContainer = ["border-transparent"];
@@ -16,6 +16,7 @@ let headerElement = null;
 
 document.addEventListener("DOMContentLoaded", () => {
 	headerElement = document.getElementById("header");
+	window.darkMode = true;
 
 	if (
 		localStorage.getItem("dark_mode") &&
