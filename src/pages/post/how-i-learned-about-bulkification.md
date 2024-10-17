@@ -2,9 +2,10 @@
 layout: ../../layouts/post.astro
 title: how I learned about bulkification
 dateFormatted: 16 October 2024
-wordCount: 245 words
+wordCount: 256 words
 readingTime: 1 min
 ---
+## Introduction
 
 My boss once said to me
 
@@ -16,6 +17,8 @@ My boss once said to me
 It stuck with me ever since.
 
 I learned about Bulkification in a Salesforce context, where we don't set our own governor limits. What this means is we can only use Apex and SOQL to retrieve records under a certain amount, and if we go over that amount we have to pay extra.
+
+## Grabbing 1 plate at a time
 
 Here's an example of what I used to do:
 
@@ -35,6 +38,8 @@ public class Kitchen {
 ```
 
 Now my boss had an issue with this because it's not efficient, why grab one plate at a time when you can grab all 100?
+
+## Grabbing all 100 plates at once
 
 Here's the better way of doing it:
 
