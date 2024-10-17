@@ -67,3 +67,7 @@
 .prose img {
   border-radius: 30px;
 }
+
+.prose blockquote {
+  quotes: none;
+}

@@ -16,16 +16,14 @@ let headerElement = null;
 
 document.addEventListener("DOMContentLoaded", () => {
 	headerElement = document.getElementById("header");
-	window.darkMode = true;
 
 	if (
 		localStorage.getItem("dark_mode") &&
-		localStorage.getItem("dark_mode") === "true"
+		localStorage.getItem("dark_mode") === "false"
 	) {
-		window.darkMode = true;
-		showNight();
-	} else {
 		showDay();
+	} else {
+		showNight();
 	}
 	stickyHeaderFuncionality();
 	applyMenuItemClasses();
@@ -60,25 +58,16 @@ window.evaluateHeaderPosition = () => {
 	}
 };
 
-//NEED TO INSPECT HOW THIS WORKS LATER
-// window.toggleDarkMode = function(){
-//     document.documentElement.classList.toggle('dark');
-//     if(document.documentElement.classList.contains('dark')){
-//         localStorage.setItem('dark_mode', true);
-//         window.darkMode = true;
-//     } else {
-//         window.darkMode = false;
-//         localStorage.setItem('dark_mode', false);
-//     }
-// }
 
 document.getElementById("darkToggle").addEventListener("click", () => {
+	document.documentElement.classList.add('duration-300');
+
   if (document.documentElement.classList.contains("dark")) {
-    localStorage.removeItem("dark_mode");
-    showDay();
+	localStorage.setItem("dark_mode", false);
+	showDay(true);
   } else {
     localStorage.setItem("dark_mode", true);
-    showNight();
+    showNight(true);
   }
 });
 
@@ -110,7 +99,6 @@ window.applyMenuItemClasses = () => {
 			menuItems[i].classList.add("underline", "decoration-4", "underline-offset", "decoration-gasoline"); 
 		}
 	}
-	//:class="{ 'text-neutral-900 dark:text-white': window.location.pathname == '{menu.url}', 'text-neutral-700 dark:text-neutral-400': window.location.pathname != '{menu.url}' }"
 };
 
 function mobileMenuFunctionality() {
