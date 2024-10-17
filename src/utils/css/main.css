@@ -71,3 +71,12 @@
 .prose blockquote {
   quotes: none;
 }
+
+::selection {
+  background: theme('colors.gasoline');
+}
+
+.dark ::selection {
+  background: theme('colors.gasoline');
+  color: theme('colors.rock');
+}
