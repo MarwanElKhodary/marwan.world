@@ -62,9 +62,9 @@ const { title } = Astro.props;
       if (typeof Storage !== "undefined") {
         if (
           localStorage.getItem("dark_mode") &&
-          localStorage.getItem("dark_mode") == "true"
+          localStorage.getItem("dark_mode") == "false"
         ) {
-          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("dark");
         }
       }
     </script>
