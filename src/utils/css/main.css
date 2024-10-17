@@ -98,7 +98,7 @@
 .prose a {
   font-family: theme('fontFamily.futuraMedium');
   color: theme('colors.rock');
-  text-decoration-color: theme('colors.rock');
+  text-decoration-color: theme('colors.gasoline');
   text-decoration-thickness: 0.15em;
   text-underline-offset: 0.3em
 }
