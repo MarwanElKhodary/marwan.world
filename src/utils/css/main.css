@@ -71,3 +71,39 @@
 .prose blockquote {
   quotes: none;
 }
+
+::selection {
+  background: theme('colors.gasoline');
+}
+
+.dark ::selection {
+  background: theme('colors.gasoline');
+  color: theme('colors.rock');
+}
+
+.dark .prose a {
+  font-family: theme('fontFamily.futuraMedium');
+  color: theme('colors.cream');
+  text-decoration: underline;
+  text-decoration-color: theme('colors.gasoline');
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.3em
+}
+
+.dark .prose a:hover {
+  background: theme('colors.gasoline');
+  color: theme('colors.rock');
+}
+
+.prose a {
+  font-family: theme('fontFamily.futuraMedium');
+  color: theme('colors.rock');
+  text-decoration-color: theme('colors.gasoline');
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.3em
+}
+
+.prose a:hover {
+  background: theme('colors.gasoline');
+  text-decoration-color: theme('colors.gasoline');
+}

@@ -12,7 +12,7 @@ export default defineConfig({
         // light: 'vitesse-light',
         dark: "everforest-dark",
       },
-      wrap: true,
+      wrap: false,
     },
   },
   output: "server",
