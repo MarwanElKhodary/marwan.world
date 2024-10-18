@@ -9,12 +9,12 @@ import Icon from "../components/icon.astro";
   <!-- <div class="relative mx-96 my-20 flex"> -->
   <div class="pt-20 xl:pt-28 flex flex-col xl:flex-row h-full mx-4 lg:mx-16 xl:mx-52 2xl:mx-72">
     <!--Intro Blurb -->
-    <div class="flex flex-col justify-center items-start h-1/2 xl:h-full xl:w-1/2 xl:ml-6">
-      <h1 class="select-none mb-3 md:mb-8 lg:mb-10 text-center text-3xl md:text-7xl font-futuraMedium leading-tight text-rock dark:text-gasoline">
+    <div class="flex flex-col justify-center items-center xl:items-start h-1/2 xl:h-full xl:w-1/2 xl:ml-6">
+      <h1 class="select-none mb-3 md:mb-8 lg:mb-10 text-3xl md:text-7xl font-futuraMedium leading-tight text-rock dark:text-gasoline">
         Hi! I'm Marwan.
       </h1>
       <!-- P Tags -->
-      <div class="text-left">
+      <div class="px-6 pb-5 md:pb-10 xl:px-0 xl:pb-0">
         <p class="select-none font-futuraBook mb-3 md:mb-8 lg:mb-10 text-lg md:text-2xl text-rock dark:text-cream">
           I'm a Full Stack Developer based in Toronto, Canada.
         </p>
@@ -27,24 +27,24 @@ import Icon from "../components/icon.astro";
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="relative grid grid-cols-3 h-full mp:gap-1 xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none">
+    <div class="relative grid grid-cols-3 h-full xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none">
       <Icon 
         pLabel="motherboard-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-4/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 xl:size-3/12 select-none"
         pPart="motherboard"
-        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-9/12"
+        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-7/12 xl:size-9/12"
       />
       <Icon 
         pLabel="gpu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-3/12 mp:size-4/12 xl:size-3/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-3/12 select-none"
         pPart="gpu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-5/12 xl:size-4/6"
       />
       <Icon 
         pLabel="hdd-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-3/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-3/12 select-none"
         pPart="hdd"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-3/6"
       />
       <Icon 
         pLabel="case-label" 
@@ -54,36 +54,36 @@ import Icon from "../components/icon.astro";
       />
       <Icon 
         pPart="monitor-off"
-        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full"
+        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-11/12"
       />
       <Icon 
         pLabel="psu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-4/12 xl:size-3/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 md:size-3/12 xl:size-2/12 select-none"
         pPart="psu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-2/6 xl:size-4/12"
       />
-      <div class="col-span-3 grid grid-cols-3">
-        <p id="instruction" class="col-span-1 col-start-2 select-none font-futuraDemi text-xs xl:text-xl py-5 xl:py-0 text-center text-rock dark:text-cream animate-fade">
+      <div class="grid col-span-3 grid-cols-3 content-center">
+        <p id="instruction" class="bg-gasoline rounded-lg col-span-3 md:col-span-1 col-start-1 md:col-start-2 select-none font-futuraDemi text-xs md:text-xl p-1 m-2 text-center text-rock">
           To start building your own PC, drag the CPU onto the Motherboard
         </p>
       </div>
       <Icon 
         pLabel="cpu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 md:size-1/12 xl:size-2/12 select-none"
         pPart="cpu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-1/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 xl:size-1/6"
       />
       <Icon 
         pLabel="cooler-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-2/12 select-none"
         pPart="cooler"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-5/12"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-5/12"
       />
       <Icon 
         pLabel="ram-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 select-none"
+        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-2/12 select-none"
         pPart="ram"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-5/12"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-5/12"
       />
     </div>
   </div>
