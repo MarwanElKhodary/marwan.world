@@ -41,7 +41,7 @@ export const svgElements = {
             <use href="/svg/psu-in-case.svg#psu-in-case"></use>
         </svg>`,
   MONITOR_ON: `
-        <svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full" id="monitor-on">
+        <svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full py-7" id="monitor-on">
             <use href="/svg/monitor-on.svg#monitor-on"></use>
         </svg>`,
 };
