@@ -7,10 +7,10 @@ const { frontmatter } = Astro.props;
   <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-cream dark:bg-rock md:rounded-t-md text-rock dark:text-cream">
     <div class="relative flex flex-col px-6 pt-10 md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-gasoline dark:border-cream">
       <div class="absolute top-0 left-0 hidden w-px h-full mt-1 -translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"></div>
-      <h1 class="w-full max-w-2xl mx-auto font-futuraExtraBold leading-snug tracking-tight text-left mb-2 md:mb-5 text-4xl text-rock dark:text-gasoline lg:text-5xl md:leading-none">
+      <h1 class="w-full max-w-2xl mx-auto font-futuraExtraBold leading-snug tracking-tight text-left mb-2 md:mb-5 text-4xl md:text-5xl text-rock dark:text-gasoline  md:leading-none">
         {frontmatter.title}
       </h1>
-      <div class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 text-grey dark:text-neutral-400">
+      <div class="w-full max-w-2xl mx-auto font-futuraBook text-left flex flex-row space-x-4 md:text-xl text-grey dark:text-neutral-400">
         <p>{frontmatter.dateFormatted}</p>
         <p>{frontmatter.wordCount}</p>
         <p>{frontmatter.readingTime}</p>
