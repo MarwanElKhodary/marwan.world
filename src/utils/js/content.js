@@ -10,31 +10,31 @@ export const instructions = {
 
 export const svgElements = {
     CPU_ON_MOTHERBOARD: `
-        <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cpu-on-motherboard">
             <use href="/svg/cpu-on-motherboard.svg#cpu-on-motherboard"></use>
         </svg>`,
     COOLER_ON_CPU: `
-        <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="cooler-on-cpu">
             <use href="/svg/cooler-on-cpu.svg#cooler-on-cpu"></use>
         </svg>`,
     RAM_ON_MOTHERBOARD: `
-        <svg class="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
+        <svg class="z-30 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-9/12" id="ram-on-motherboard">
             <use href="/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
         </svg>`,
     MOTHERBOARD_IN_CASE: `
-        <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
             <use href="/svg/motherboard-in-case.svg#motherboard-in-case"></use>
         </svg>`,
     GPU_IN_CASE: `
-        <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
             <use href="/svg/gpu-in-case.svg#gpu-in-case"></use>
         </svg>`,
     HDD_IN_CASE: `
-        <svg class="z-40 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
             <use href="/svg/hdd-in-case.svg#hdd-in-case"></use>
         </svg>`,
     PSU_IN_CASE: `
-        <svg class="z-40 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
+        <svg class="z-30 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
             <use href="/svg/psu-in-case.svg#psu-in-case"></use>
         </svg>`,
     MONITOR_ON: `
