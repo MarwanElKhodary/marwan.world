@@ -1,14 +1,11 @@
 export const instructions = {
-  ADD_COOLER:
-    "Great! Now you can add the Cooler on top of the CPU in the Motherboard",
-  ADD_RAM: "Last thing for the Motherboard is to add the RAM",
+  ADD_COOLER:              "Great! Now you can add the Cooler on top of the CPU in the Motherboard",
+  ADD_RAM:                 "Last thing for the Motherboard is to add the RAM",
   ADD_MOTHERBOARD_TO_CASE: "Now you can insert the Motherboard in the Case!",
-  ADD_GPU:
-    "Now we can start building in the case. Insert the GPU underneath the Motherboard",
-  ADD_HDD: "Hard Drive next.",
-  ADD_PSU:
-    "Last step! Fit the Power Supply in the Case so we can turn the PC on!",
-  CONGRATS: "Congratulations! You just built your first PC!",
+  ADD_GPU:                 "Insert the GPU underneath the Motherboard",
+  ADD_HDD:                 "Hard Drive next.",
+  ADD_PSU:                 "Last step! Fit the Power Supply in the Case so we can turn the PC on!",
+  CONGRATS:                "Congratulations! You just built your first PC!",
 };
 
 export const svgElements = {
