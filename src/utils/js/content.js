@@ -1,5 +1,5 @@
 export const instructions = {
-  ADD_COOLER:              "Great! Now you can add the Cooler on top of the CPU in the Motherboard",
+  ADD_COOLER:              "Great! Now you can add the Cooler on top of the CPU",
   ADD_RAM:                 "Last thing for the Motherboard is to add the RAM",
   ADD_MOTHERBOARD_TO_CASE: "Now you can insert the Motherboard in the Case!",
   ADD_GPU:                 "Insert the GPU underneath the Motherboard",
