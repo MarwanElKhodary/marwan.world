@@ -27,34 +27,34 @@ import Icon from "../components/icon.astro";
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="relative grid h-1/2 md:h-auto grid-cols-3 grid-rows-1 2xl:gap-8 2xl:pt-16 xl:w-2/3 touch-none">
+    <div class="relative grid h-1/2 md:h-auto grid-cols-3 grid-rows-1 2xl:gap-8 xl:pt-16 xl:w-2/3 touch-none">
       <Icon 
         pParent="flex justify-center items-center col-span-1"
         pLabel="motherboard-label" 
-        pLabelClass="absolute font-futuraMedium text-xs text-rock dark:text-gasoline fill-current size-3/12 2xl:size-3/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs xl:text-base 2xl:text-sm text-rock dark:text-gasoline fill-current size-3/12 xl:size-2/12 2xl:size-3/12 select-none"
         pPart="motherboard"
-        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-8/12 2xl:size-9/12 2xl:my-5" 
+        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-8/12 xl:size-5/12 2xl:size-9/12 2xl:my-5" 
         />
       <Icon 
         pParent="flex justify-center items-center col-span-1"
         pLabel="gpu-label" 
-        pLabelClass="absolute font-futuraMedium text-xs text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs 2xl:text-sm text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
         pPart="gpu"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 2xl:size-5/12"
       />
       <Icon 
         pParent="flex justify-center items-center col-span-1"
         pLabel="hdd-label" 
-        pLabelClass="absolute font-futuraMedium text-xs text-rock dark:text-gasoline fill-current size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs 2xl:text-sm text-rock dark:text-gasoline fill-current size-2/12 select-none"
         pPart="hdd"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12"
       />
       <Icon 
         pParent="flex justify-center items-center col-span-1 row-start-2"
         pLabel="case-label" 
-        pLabelClass="absolute font-futuraMedium text-base text-rock dark:text-gasoline fill-current size-4/12 sm:size-5/12 2xl:size-4/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-base text-rock dark:text-gasoline fill-current size-4/12 sm:size-5/12 xl:size-4/12 select-none"
         pPart="case"
-        pPartClass="z-40 fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 2xl:!scale-150"
+        pPartClass="z-40 fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 2xl:scale-150"
       />
       <Icon 
         pParent="flex justify-center items-center row-start-2"
@@ -68,7 +68,7 @@ import Icon from "../components/icon.astro";
         pPart="psu"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 md:size-3/12 2xl:size-4/12"
       />
-      <div class="col-span-2 col-start-2 col-end-3 h-[4.6875rem] 2xl:mb-6">
+      <div class="col-span-2 col-start-2 col-end-3 h-[4.6875rem] xl:mb-6">
         <p id="instruction" class="bg-gasoline rounded-lg select-none font-futuraDemi text-xs md:text-xl xl:text-lg 2xl:text-xl p-1 text-center text-rock">
           Start by dragging the CPU onto the Motherboard
         </p>
@@ -76,7 +76,7 @@ import Icon from "../components/icon.astro";
       <Icon 
         pParent="flex justify-center items-center col-span-1 col-start-1"
         pLabel="cpu-label" 
-        pLabelClass="absolute font-futuraMedium text-[0.55rem] text-rock dark:text-gasoline fill-current size-2/12 md:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-[0.55rem] xl:text-[0.5rem] text-rock dark:text-gasoline fill-current size-2/12 md:size-2/12 select-none"
         pPart="cpu"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 2xl:size-1/6"
       />
@@ -90,7 +90,7 @@ import Icon from "../components/icon.astro";
       <Icon 
         pParent="flex justify-center items-center col-span-1"
         pLabel="ram-label" 
-        pLabelClass="absolute font-futuraMedium text-sm text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-sm xl:text-xs text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
         pPart="ram"
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 2xl:size-5/12"
       />
