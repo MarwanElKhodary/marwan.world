@@ -3,28 +3,30 @@ import { instructions, svgElements } from "./content";
 
 // constants-----------------------------------------------------------------
 
-const DATA_X = "data-x";
-const DATA_Y = "data-y";
-const NONE = "none";
-const LABEL = "-label";
+const DATA_X   = "data-x";
+const DATA_Y   = "data-y";
+const NONE     = "none";
+const LABEL    = "-label";
 const DROPZONE = "dropzone";
+const HIDDEN   = "hidden";
+const VISIBLE  = "visible";
 
-const MOTHERBOARD = "motherboard";
-const CASE = "case";
+const MOTHERBOARD   = "motherboard";
+const CASE          = "case";
 const COOLER_ON_CPU = "cooler-on-cpu";
-const GPU_IN_CASE = "gpu-in-case";
-const HDD_IN_CASE = "hdd-in-case";
-const MONITOR_OFF = "monitor-off";
-const CPU_ON_MOTHERBOARD = "cpu-on-motherboard";
+const GPU_IN_CASE   = "gpu-in-case";
+const HDD_IN_CASE   = "hdd-in-case";
+const MONITOR_OFF   = "monitor-off";
+const CPU_ON_MOTHERBOARD  = "cpu-on-motherboard";
 const MOTHERBOARD_IN_CASE = "motherboard-in-case";
 
-const DZ_ACCEPT_CPU = "#cpu";
-const DZ_ACCEPT_CASE = "#case";
+const DZ_ACCEPT_CPU    = "#cpu";
+const DZ_ACCEPT_CASE   = "#case";
 const DZ_ACCEPT_COOLER = "#cooler";
-const DZ_ACCEPT_RAM = "#ram";
-const DZ_ACCEPT_GPU = "#gpu";
-const DZ_ACCEPT_HDD = "#hdd";
-const DZ_ACCEPT_PSU = "#psu";
+const DZ_ACCEPT_RAM    = "#ram";
+const DZ_ACCEPT_GPU    = "#gpu";
+const DZ_ACCEPT_HDD    = "#hdd";
+const DZ_ACCEPT_PSU    = "#psu";
 const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
 
 // global variables----------------------------------------------------------
@@ -60,17 +62,17 @@ function getDropzoneContent() {
 
   switch (currentDropzone) {
     case MOTHERBOARD:
-      currentDropzone = CPU_ON_MOTHERBOARD;
+      currentDropzone         = CPU_ON_MOTHERBOARD;
       instruction.textContent = instructions.ADD_COOLER;
       return svgElements.CPU_ON_MOTHERBOARD;
 
     case CPU_ON_MOTHERBOARD:
-      currentDropzone = COOLER_ON_CPU;
+      currentDropzone         = COOLER_ON_CPU;
       instruction.textContent = instructions.ADD_RAM;
       return svgElements.COOLER_ON_CPU;
 
     case COOLER_ON_CPU:
-      currentDropzone = CASE;
+      currentDropzone         = CASE;
       instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
 
       const caseElement = document.querySelector(DZ_ACCEPT_CASE);
@@ -81,17 +83,17 @@ function getDropzoneContent() {
       return svgElements.RAM_ON_MOTHERBOARD;
 
     case CASE:
-      currentDropzone = MOTHERBOARD_IN_CASE;
+      currentDropzone         = MOTHERBOARD_IN_CASE;
       instruction.textContent = instructions.ADD_GPU;
       return svgElements.MOTHERBOARD_IN_CASE;
 
     case MOTHERBOARD_IN_CASE:
-      currentDropzone = GPU_IN_CASE;
+      currentDropzone         = GPU_IN_CASE;
       instruction.textContent = instructions.ADD_HDD;
       return svgElements.GPU_IN_CASE;
 
     case GPU_IN_CASE:
-      currentDropzone = HDD_IN_CASE;
+      currentDropzone         = HDD_IN_CASE;
       instruction.textContent = instructions.ADD_PSU;
       return svgElements.HDD_IN_CASE;
 
@@ -190,29 +192,24 @@ window.addEventListener("load", () => {
         },
         drop(pEvent) {
           const droppedIcon = pEvent.relatedTarget;
-          const dropzone = pEvent.target;
-          const parentDiv = dropzone.parentNode;
+          const dropzone    = pEvent.target;
+          const parentDiv   = dropzone.parentNode;
 
           var dropzoneId = dropzone.getAttribute("id");
-          var label = document.getElementById(dropzoneId + LABEL);
+          var label      = document.getElementById(dropzoneId + LABEL);
 
-          droppedIcon.style.visibility = "hidden";
-          dropzone.style.display = NONE;
+          droppedIcon.style.visibility = HIDDEN;
+          dropzone.style.display       = NONE;
           label ? (label.style.display = NONE) : null;
 
           parentDiv.innerHTML = getDropzoneContent();
 
           if (dropzoneId === HDD_IN_CASE) {
             setTimeout(() => {
-              const monitorOff = document.getElementById(MONITOR_OFF);
-              monitorOff.style.visiblity = "hidden";
-              monitorOff.innerHTML = svgElements.MONITOR_ON;
-              monitorOff.style.visiblity = "visible";
-
-              // const monitorOn = svgElements.MONITOR_ON;
-              // const test_case = document.getElementById(PSU_IN_CASE)
-              //
-              // monitorOff.outerHTML = monitorOn;
+              const monitorOff           = document.getElementById(MONITOR_OFF);
+              monitorOff.style.visiblity = HIDDEN;
+              monitorOff.innerHTML       = svgElements.MONITOR_ON;
+              monitorOff.style.visiblity = VISIBLE;
             }, 1000);
           }
         },
