@@ -27,7 +27,7 @@ import Icon from "../components/icon.astro";
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="relative grid h-1/2 md:h-auto grid-cols-3 xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none">
+    <div class="relative grid h-1/2 md:h-auto grid-cols-3 grid-rows-1 xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none ">
       <Icon 
         pParent="flex justify-center items-center col-span-1"
         pLabel="motherboard-label" 
@@ -50,16 +50,16 @@ import Icon from "../components/icon.astro";
         pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12"
       />
       <Icon 
-        pParent="flex justify-center items-center col-span-1"
+        pParent="flex justify-center items-center col-span-1 row-start-2"
         pLabel="case-label" 
-        pLabelClass="absolute font-futuraMedium text-base text-rock dark:text-gasoline fill-current size-5/12 mp:size-4/12 sm:size-5/12 xl:size-4/12 2xl:size-4/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-base text-rock dark:text-gasoline fill-current size-5/12 mp:size-4/12 sm:size-5/12 xl:size-7/12 2xl:size-5/12 select-none"
         pPart="case"
-        pPartClass="z-40 text-rock dark:text-gasoline fill-current size-3/6 scale-150"
+        pPartClass="z-40 text-rock dark:text-gasoline stroke-3 fill-none dark:stroke-gasoline size-4/6 xl:!scale-150"
       />
       <Icon 
-        pParent="flex justify-center items-center col-span-1"
+        pParent="flex justify-center items-center row-start-2 "
         pPart="monitor-off"
-        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-9/12"
+        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:!size-10/12"
       />
       <Icon 
         pParent="flex justify-center items-center col-span-1"

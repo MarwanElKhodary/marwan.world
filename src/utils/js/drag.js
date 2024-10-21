@@ -205,9 +205,14 @@ window.addEventListener("load", () => {
           if (dropzoneId === HDD_IN_CASE) {
             setTimeout(() => {
               const monitorOff = document.getElementById(MONITOR_OFF);
-              const monitorOn = svgElements.MONITOR_ON;
+              monitorOff.style.visiblity = "hidden";
+              monitorOff.innerHTML = svgElements.MONITOR_ON;
+              monitorOff.style.visiblity = "visible";
 
-              monitorOff.outerHTML = monitorOn;
+              // const monitorOn = svgElements.MONITOR_ON;
+              // const test_case = document.getElementById(PSU_IN_CASE)
+              //
+              // monitorOff.outerHTML = monitorOn;
             }, 1000);
           }
         },

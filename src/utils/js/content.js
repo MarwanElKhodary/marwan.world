@@ -25,23 +25,23 @@ export const svgElements = {
             <use href="/svg/ram-on-motherboard.svg#ram-on-motherboard"></use>
         </svg>`,
   MOTHERBOARD_IN_CASE: `
-        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="motherboard-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 xl:scale-150" id="motherboard-in-case">
             <use href="/svg/motherboard-in-case.svg#motherboard-in-case"></use>
         </svg>`,
   GPU_IN_CASE: `
-        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="gpu-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 xl:scale-150" id="gpu-in-case">
             <use href="/svg/gpu-in-case.svg#gpu-in-case"></use>
         </svg>`,
   HDD_IN_CASE: `
-        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="hdd-in-case">
+        <svg class="z-30 dropzone text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 xl:scale-150" id="hdd-in-case">
             <use href="/svg/hdd-in-case.svg#hdd-in-case"></use>
         </svg>`,
   PSU_IN_CASE: `
-        <svg class="z-30 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline scale-150" id="psu-in-case">
+        <svg class="z-30 text-rock dark:text-gasoline fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 xl:!scale-150" id="psu-in-case">
             <use href="/svg/psu-in-case.svg#psu-in-case"></use>
         </svg>`,
   MONITOR_ON: `
-        <svg class="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-full py-7" id="monitor-on">
+        <svg class="place-self-center text-rock dark:text-gasoline fill-current size-9/12 xl:!size-10/12 scale-150 " id="monitor-on">
             <use href="/svg/monitor-on.svg#monitor-on"></use>
         </svg>`,
 };
