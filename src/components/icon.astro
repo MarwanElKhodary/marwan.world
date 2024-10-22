@@ -2,6 +2,7 @@
 import { parse } from 'node-html-parser';
 
 export interface Props {
+    pParent?: string;
     pPart: string;
     pPartClass?: string;
     pLabel?: string;
@@ -28,7 +29,7 @@ function getSVG(name: string) {
     return { attributes, innerHTML };
 }
 
-const { pLabel, pLabelClass, pPart, pPartClass } = Astro.props as Props;
+const { pParent, pLabel, pLabelClass, pPart, pPartClass } = Astro.props as Props;
 
 let labelAttributes = {};
 let labelHTML = {};
@@ -52,7 +53,7 @@ const partAttributes = {
 ---
 
 {pLabel ? (
-    <div class="flex justify-center items-center">
+    <div class={pParent}>
         <svg {...labelAttributes} set:html={labelHTML}></svg>
         <svg {...partAttributes} set:html={partHTML}></svg>
     </div>

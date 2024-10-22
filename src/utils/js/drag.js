@@ -7,7 +7,9 @@ const DATA_X   = "data-x";
 const DATA_Y   = "data-y";
 const NONE     = "none";
 const LABEL    = "-label";
-const DROPZONE = 'dropzone';         
+const DROPZONE = "dropzone";
+const HIDDEN   = "hidden";
+const VISIBLE  = "visible";
 
 const MOTHERBOARD   = "motherboard";
 const CASE          = "case";
@@ -29,17 +31,17 @@ const DZ_ACCEPT_RAM_ON_MOTHERBOARD = "#ram-on-motherboard";
 
 // global variables----------------------------------------------------------
 
-let currentAccept   = DZ_ACCEPT_CPU;
+let currentAccept = DZ_ACCEPT_CPU;
 let currentDropzone = MOTHERBOARD;
 
 // functions-----------------------------------------------------------------
 
 function dragMoveListener(pEvent) {
-  var target   = pEvent.target;
+  var target = pEvent.target;
   var dataName = target.getAttribute("data-name");
-  var label    = document.getElementById(dataName + LABEL);
+  var label = document.getElementById(dataName + LABEL);
 
-  label ? label.style.display = NONE : null;
+  label ? (label.style.display = NONE) : null;
 
   //keep the dragged position in the data-x/data-y attributes
   var x = (parseFloat(target.getAttribute(DATA_X)) || 0) + pEvent.dx;
@@ -56,7 +58,7 @@ function dragMoveListener(pEvent) {
 }
 
 function getDropzoneContent() {
-  const instruction = document.getElementById('instruction');
+  const instruction = document.getElementById("instruction");
 
   switch (currentDropzone) {
     case MOTHERBOARD:
@@ -74,7 +76,9 @@ function getDropzoneContent() {
       instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
 
       const caseElement = document.querySelector(DZ_ACCEPT_CASE);
-      caseElement && !caseElement.classList.contains(DROPZONE) ? caseElement.classList.add(DROPZONE) : null;
+      caseElement && !caseElement.classList.contains(DROPZONE)
+        ? caseElement.classList.add(DROPZONE)
+        : null;
 
       return svgElements.RAM_ON_MOTHERBOARD;
 
@@ -106,7 +110,7 @@ function setDropzoneAccept(pNewAccept) {
   currentAccept = pNewAccept;
   interact(".dropzone").dropzone({
     accept: currentAccept,
-    overlap: 0.2
+    overlap: 0.2,
   });
 }
 
@@ -114,15 +118,15 @@ function setDropzoneAccept(pNewAccept) {
 
 window.addEventListener("load", () => {
   interact(".drag-drop")
-  .styleCursor(false)
-  .draggable({
-    // modifiers: [
-    //   interact.modifiers.restrictRect({
-    //     restriction: "parent",
-    //     endOnly: true,
-    //   }),
-    // ],
-    listeners: {
+    .styleCursor(false)
+    .draggable({
+      // modifiers: [
+      //   interact.modifiers.restrictRect({
+      //     restriction: "parent",
+      //     endOnly: true,
+      //   }),
+      // ],
+      listeners: {
         start(pEvent) {
           switch (currentDropzone) {
             case MOTHERBOARD:
@@ -158,7 +162,7 @@ window.addEventListener("load", () => {
         },
       },
     });
-  
+
   interact(".dropzone")
     .styleCursor(false)
     .dropzone({
@@ -173,7 +177,6 @@ window.addEventListener("load", () => {
         dragenter(pEvent) {
           // var draggableElement = event.relatedTarget;
           // var dropzoneElement = event.target;
-
           //feedback the possibility of a drop
           // dropzoneElement.classList.add("drop-target");
           // draggableElement.classList.add("can-drop");
@@ -195,21 +198,20 @@ window.addEventListener("load", () => {
           var dropzoneId = dropzone.getAttribute("id");
           var label      = document.getElementById(dropzoneId + LABEL);
 
-          droppedIcon.style.display   = NONE;
-          dropzone.style.display      = NONE;
-          label ? label.style.display = NONE : null;
+          droppedIcon.style.visibility = HIDDEN;
+          dropzone.style.display       = NONE;
+          label ? (label.style.display = NONE) : null;
 
           parentDiv.innerHTML = getDropzoneContent();
 
           if (dropzoneId === HDD_IN_CASE) {
             setTimeout(() => {
-              const monitorOff = document.getElementById(MONITOR_OFF);
-              const monitorOn  = svgElements.MONITOR_ON;
-              
-              monitorOff.outerHTML = monitorOn;
+              const monitorOff           = document.getElementById(MONITOR_OFF);
+              monitorOff.style.visiblity = HIDDEN;
+              monitorOff.innerHTML       = svgElements.MONITOR_ON;
+              monitorOff.style.visiblity = VISIBLE;
             }, 1000);
           }
-
         },
         // dropdeactivate(pEvent) {
         //   //remove active dropzone feedback

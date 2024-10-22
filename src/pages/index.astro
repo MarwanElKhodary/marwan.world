@@ -7,83 +7,92 @@ import Icon from "../components/icon.astro";
 
 <Layout title="Marwan ElKhodary">
   <!-- <div class="relative mx-96 my-20 flex"> -->
-  <div class="pt-20 xl:pt-28 flex flex-col xl:flex-row h-full mx-4 lg:mx-16 xl:mx-52 2xl:mx-72">
+  <div class="h-full pt-20 xl:pt-0 flex flex-col xl:flex-row mx-4 lg:mx-16 2xl:mx-72">
     <!--Intro Blurb -->
-    <div class="flex flex-col justify-center items-center xl:items-start h-1/2 xl:h-full xl:w-1/2 xl:ml-6">
-      <h1 class="select-none mb-3 md:mb-8 lg:mb-10 text-3xl md:text-7xl font-futuraMedium leading-tight text-rock dark:text-gasoline">
+    <div class="h-1/2 xl:h-full flex flex-col justify-center items-center xl:items-start xl:w-1/2 xl:ml-8 2xl:ml-6 2xl:mr-14 xl:mt-20 2xl:mt-16">
+      <h1 class="select-none mb-3 md:mb-8 lg:mb-10 text-3xl md:text-7xl xl:text-7xl font-futuraMedium leading-tight text-rock dark:text-gasoline">
         Hi! I'm Marwan.
       </h1>
       <!-- P Tags -->
-      <div class="px-6 pb-5 md:pb-10 xl:px-0 xl:pb-0">
+      <div class="px-6 pb-5 md:pb-10 xl:px-0 xl:pb-0 xl:ml-1">
         <p class="select-none font-futuraBook mb-3 md:mb-8 lg:mb-10 text-lg md:text-2xl text-rock dark:text-cream">
           I'm a Full Stack Developer based in Toronto, Canada.
         </p>
         <p class="select-none font-futuraBook mb-3 md:mb-8 lg:mb-10 text-lg md:text-2xl text-rock dark:text-cream">
           I've been building stuff on the web since 2020.
         </p>
-        <p class="select-none font-futuraBook mb-3 md:mb-8 lg:mb-10 text-lg md:text-2xl text-rock dark:text-cream">
+        <p class="select-none font-futuraBook md:mb-8 lg:mb-10 text-lg md:text-2xl text-rock dark:text-cream">
           In 2021, I built my own computer. You can build your own too!
         </p>
       </div>
     </div>
     <!-- Computer Parts Container -->
-    <div class="relative grid grid-cols-3 h-full xl:gap-8 xl:w-1/2 2xl:w-2/3 touch-none">
+    <div class="relative grid h-1/2 md:h-auto grid-cols-3 grid-rows-1 2xl:gap-8 xl:pt-10 2xl:pt-16 xl:w-2/3 touch-none">
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="motherboard-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 xl:size-3/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs xl:text-base 2xl:text-sm text-rock dark:text-gasoline fill-current size-3/12 xl:size-[18%] 2xl:size-3/12 select-none"
         pPart="motherboard"
-        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-7/12 xl:size-9/12"
-      />
+        pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-8/12 xl:size-6/12 2xl:size-9/12" 
+        />
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="gpu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-3/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs 2xl:text-sm text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
         pPart="gpu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-5/12 xl:size-4/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 2xl:size-5/12"
       />
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="hdd-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-3/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-xs 2xl:text-sm text-rock dark:text-gasoline fill-current size-2/12 select-none"
         pPart="hdd"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-3/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-3/12 2xl:size-4/12"
       />
       <Icon 
+        pParent="flex justify-center items-center col-span-1 row-start-2"
         pLabel="case-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-5/12 mp:size-4/12 sm:size-5/12 xl:size-4/12 2xl:size-5/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-base xl:text-sm 2xl:text-base text-rock dark:text-gasoline fill-current size-4/12 sm:size-5/12 xl:size-5/12 2xl:size-4/12 select-none"
         pPart="case"
-        pPartClass="z-40 text-rock dark:text-gasoline fill-current size-4/6"
+        pPartClass="z-40 fill-none stroke-3 stroke-rock dark:stroke-gasoline size-4/6 xl:scale-150 2xl:scale-150"
       />
       <Icon 
+        pParent="flex justify-center items-center row-start-2"
         pPart="monitor-off"
-        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-11/12"
+        pPartClass="place-self-center text-rock dark:text-gasoline fill-current size-7/12 xl:size-9/12 2xl:size-10/12"
       />
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="psu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 md:size-3/12 xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-base text-rock dark:text-gasoline fill-current size-2/12 md:size-2/12 2xl:size-2/12 select-none"
         pPart="psu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-2/6 xl:size-4/12"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 md:size-3/12 2xl:size-4/12"
       />
-      <div class="grid col-span-3 grid-cols-3 content-center">
-        <p id="instruction" class="bg-gasoline rounded-lg col-span-3 md:col-span-1 col-start-1 md:col-start-2 select-none font-futuraDemi text-xs md:text-xl p-1 m-2 text-center text-rock">
-          To start building your own PC, drag the CPU onto the Motherboard
+      <div class="col-span-2 col-start-2 col-end-3 h-[4.6875rem] xl:mb-6">
+        <p id="instruction" class="bg-gasoline rounded-lg select-none font-futuraDemi text-xs md:text-xl xl:text-lg 2xl:text-xl p-1 text-center text-rock">
+          Start by dragging the CPU onto the Motherboard
         </p>
       </div>
       <Icon 
+        pParent="flex justify-center items-center col-span-1 col-start-1"
         pLabel="cpu-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 md:size-1/12 xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-[0.55rem] xl:text-[0.5rem] text-rock dark:text-gasoline fill-current size-2/12 md:size-2/12 select-none"
         pPart="cpu"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 xl:size-1/6"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-3/12 md:size-2/12 2xl:size-1/6"
       />
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="cooler-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-[0.55rem] text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
         pPart="cooler"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-5/12"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 2xl:size-5/12"
       />
       <Icon 
+        pParent="flex justify-center items-center col-span-1"
         pLabel="ram-label" 
-        pLabelClass="absolute text-rock dark:text-gasoline fill-current size-2/12 xl:size-2/12 select-none"
+        pLabelClass="absolute font-futuraMedium text-sm xl:text-xs text-rock dark:text-gasoline fill-current size-2/12 2xl:size-2/12 select-none"
         pPart="ram"
-        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 xl:size-5/12"
+        pPartClass="z-40 hover:cursor-grab drag-drop text-rock dark:text-gasoline fill-current size-4/12 2xl:size-5/12"
       />
     </div>
   </div>
