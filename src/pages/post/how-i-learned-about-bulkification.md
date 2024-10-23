@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/post.astro
-title: how I learned about bulkification
+title: How I Learned About Bulkification
 dateFormatted: 16 October 2024
 wordCount: 256 words
 readingTime: 1 min

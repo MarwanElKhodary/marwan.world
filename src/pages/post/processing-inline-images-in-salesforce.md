@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/post.astro
-title: processing inline images in Salesforce
+title: Processing Inline Images in Salesforce
 dateFormatted: 18 June 2024
 wordCount: 590 words
 readingTime: 4 min
