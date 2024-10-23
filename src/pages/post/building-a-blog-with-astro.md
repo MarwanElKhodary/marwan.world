@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/post.astro
-title: building a blog with astro
+title: Building a Blog with Astro
 dateFormatted: 18 October 2024
 wordCount: 368 words
 readingTime: 2 min
