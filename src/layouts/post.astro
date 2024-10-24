@@ -3,7 +3,7 @@ import Layout from "./main.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={`${frontmatter.title} | Marwan ElKhodary`}>
+<Layout title={`${frontmatter.title} | Marwan ElKhodary`} description={frontmatter.description}>
   <main class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-cream dark:bg-rock md:rounded-t-md text-rock dark:text-cream">
     <div class="relative flex flex-col px-6 pt-10 md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-gasoline dark:border-cream">
       <div class="absolute top-0 left-0 hidden w-px h-full mt-1 -translate-x-px md:block bg-gradient-to-b from-transparent to-cream dark:to-rock"></div>
