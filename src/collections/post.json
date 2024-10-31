@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Making the PC game",
+		"description": "How and why I built this website",
+		"dateFormatted": "30 October 2024",
+		"wordCount": "368 words",
+		"readingTime": "2 min",
+		"link": "/post/making-the-pc-game"
+	},
+	{
 		"title": "Building a Blog with Astro",
 		"description": "How and why I built this website",
 		"dateFormatted": "17 October 2024",
