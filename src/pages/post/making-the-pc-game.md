@@ -16,7 +16,7 @@ I went through [HackerNews](https://news.ycombinator.com/) daily and started not
 While I pride myself as a full-stack developer, I knew I didn't have the chops to call myself a front-end developer... I still have tons to learn about crafting and designing beautiful, engaging websites. So I ended up focusing on trying to add 1 element to my website that would make it stand out.
 
 <div style="display: flex; justify-content: center;">
-  <img src="/posts/making-the-pc-game/monica-dinculescu-art.gif" alt="Front end view of a posted inline image" />
+  <img src="/posts/making-the-pc-game/monica-dinculescu-art.gif" alt="Monica Dinculescu's cool art" />
 </div>
 
 ## Design
