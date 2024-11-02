@@ -2,8 +2,8 @@
 layout: ../../layouts/post.astro
 title: Making the PC game
 dateFormatted: 30 October 2024
-wordCount: 368 words
-readingTime: 2 min
+wordCount: 2,500 words
+readingTime: 12 min
 description: How and why I built this website
 ---
 
@@ -339,7 +339,7 @@ Finally, an example of what's in ```content.js``` just showing how I did not mak
 
 ```javascript
 export const instructions = {
-  CONGRATS:                "Congratulations! You just built your first PC!",
+  CONGRATS: "Congratulations! You just built your first PC!",
 };
 
 export const svgElements = {
@@ -351,6 +351,20 @@ export const svgElements = {
 
 ## Issues
 
+![My GitHub contribution history from June to October](/posts/making-the-pc-game/github-history.jpg)
+
+When I started *coding with purpose* back in June, you can see most of [my contributions](https://github.com/MarwanElKhodary) related to this website have been in June and October. I can confidently tell you that at least 70% of my contributions have been made in regards to the PC game. This is primarily due to the issues I encountered like:
+
+- SVG sizing issues when replacing the individual PC parts with combined PC parts
+- CSS-related issues with the PC parts from Yasemin's exported SVGs to what it looked like locally
+- Trying to make the PC parts responsive on laptops, monitors and smartphones
+  - You can still see some of these issues currently on the website, especially on smartphones and tablets :(
+
 ## Learnings
+
+- I need to look more into how SVG works, primarily with why I faced so many issues with removing CSS from Adobe Illustrator-exported SVGs
+- I've never thought of myself as a perfectionist till I started working on this website, I need to learn on how to ship faster
+- Spend more time thinking about architectural decisions, I think building this game could have been much more efficient and faster had I discussed my technical details with another developer
+- There was a large number of iterations between design and implementation, factor this when building a somewhat-complex program
 
 ## Final Thoughts
