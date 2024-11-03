@@ -257,7 +257,7 @@ export const svgElements = {
 
 ## Issues I've Faced
 
-![My GitHub contribution history from June to October](/posts/making-the-pc-game/github-history.jpg)
+![My GitHub contribution history from June to October](/posts/making-the-pc-game-part-2/github-history.jpg)
 
 When I started *coding with purpose* back in June, you can see most of [my contributions](https://github.com/MarwanElKhodary) related to this website have been in June and October. I can confidently tell you that at least 70% of my contributions have been made in regards to the PC game. This is primarily due to the issues I encountered like:
 
