@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/post.astro
 title: How I Learned About Bulkification
-dateFormatted: 16 October 2024
+dateFormatted: October 16 2024
 wordCount: 256 words
 readingTime: 1 min
 description: Don't grab 1 plate at a time when you can grab all 100

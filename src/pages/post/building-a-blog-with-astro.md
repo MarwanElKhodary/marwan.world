@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/post.astro
 title: Building a Blog with Astro
-dateFormatted: 18 October 2024
+dateFormatted: October 17 2024
 wordCount: 368 words
 readingTime: 2 min
 description: How and why I built this website

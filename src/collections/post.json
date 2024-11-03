@@ -1,16 +1,16 @@
 [
 	{
-		"title": "Making the PC game",
-		"description": "How and why I built this website",
-		"dateFormatted": "30 October 2024",
-		"wordCount": "1,877 words",
-		"readingTime": "10 min",
-		"link": "/post/making-the-pc-game"
+		"title": "Making the PC Game - Part 1",
+		"description": "The inspiration and design of the PC game",
+		"dateFormatted": "November 3 2024",
+		"wordCount": "690 words",
+		"readingTime": "4 min",
+		"link": "/post/making-the-pc-game-part-1"
 	},
 	{
 		"title": "Building a Blog with Astro",
 		"description": "How and why I built this website",
-		"dateFormatted": "17 October 2024",
+		"dateFormatted": "October 17 2024",
 		"wordCount": "368 words",
 		"readingTime": "2 min",
 		"link": "/post/building-a-blog-with-astro"
@@ -18,7 +18,7 @@
 	{
 		"title": "How I Learned About Bulkification",
 		"description": "Don't grab 1 plate at a time when you can grab all 100",
-		"dateFormatted": "16 October 2024",
+		"dateFormatted": "October 16 2024",
 		"wordCount": "256 words",
 		"readingTime": "1 min",
 		"link": "/post/how-i-learned-about-bulkification"
@@ -26,7 +26,7 @@
 	{
 		"title": "Processing Inline Images in Salesforce",
 		"description": "How to post an inline image in Salesforce Chatter with LWCs and Apex",
-		"dateFormatted": "18 June 2024",
+		"dateFormatted": "June 18 2024",
 		"wordCount": "590 words",
 		"readingTime": "4 min",
 		"link": "/post/processing-inline-images-in-salesforce"

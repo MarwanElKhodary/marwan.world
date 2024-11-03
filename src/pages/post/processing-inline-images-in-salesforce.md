@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/post.astro
 title: Processing Inline Images in Salesforce
-dateFormatted: 18 June 2024
+dateFormatted: June 18 2024
 wordCount: 590 words
 readingTime: 4 min
 description: How to post an inline image in Salesforce Chatter with LWCs and Apex
