@@ -2,8 +2,8 @@
 layout: ../../layouts/post.astro
 title: Making the PC game
 dateFormatted: 30 October 2024
-wordCount: 2,500 words
-readingTime: 12 min
+wordCount: 1,877 words
+readingTime: 10 min
 description: How and why I built this website
 ---
 
@@ -11,13 +11,13 @@ description: How and why I built this website
 
 When I started planning my blogs, I sought out inspiration that would guide my design process. I knew that ultimately, this blog would be an excuse for me to write more on [LinkedIn](https://www.linkedin.com/in/marwan-elkhodary/), but I wanted to add a *me* element to it.
 
-I went through [HackerNews](https://news.ycombinator.com/) daily and started noting blogs that had cool designs. My list ranged from beautiful and overly ambitious websites such as [Alistar Shepard's](https://alistairshepherd.uk/) with his sleek scroll animation and beautiful scenery:
+I went through [HackerNews](https://news.ycombinator.com/) daily and started noting blogs that had cool designs. My list ranged from beautiful and overly ambitious websites such as [Alistar Shepard's](https://alistairshepherd.uk/) with his sleek scroll animation and charming scenery:
 
 <div style="display: flex; justify-content: center;">
   <img src="/posts/making-the-pc-game/alistair-shepherd-website.gif" alt="Alistair Shepherd's cool scroll animation on his website" />
 </div>
 
-Or [Jacob Leech's](https://jacobleech.com/) design and creativity:
+Or [Jacob Leech's design and creativity](https://jacobleech.com/):
 
 <div style="display: flex; justify-content: center;">
   <img src="/posts/making-the-pc-game/jacob-leech-website.gif" alt="Jacob Leech's amazing design" />
@@ -25,19 +25,19 @@ Or [Jacob Leech's](https://jacobleech.com/) design and creativity:
 
 While I pride myself as a full-stack developer, I knew I didn't have the chops to call myself a front-end developer... I still have tons to learn about crafting and designing beautiful, engaging websites. So I ended up focusing on trying to add 1 component to my website that would make it stand out.
 
-More inspiration consisted of cool components like [Monica Dinculescu's](https://meowni.ca/) regenerating art:
+More inspiration consisted of cool components like [Monica Dinculescu's regenerating art](https://meowni.ca/):
 
 <div style="display: flex; justify-content: center;">
   <img src="/posts/making-the-pc-game/monica-dinculescu-art.gif" alt="Monica Dinculescu's cool art" />
 </div>
 
-Or [Chris Kirk-Nielsen's](https://chriskirknielsen.com/) hilarious random fact generator:
+Or [Chris Kirk-Nielsen's hilarious random fact generator](https://chriskirknielsen.com/):
 
 <div style="display: flex; justify-content: center;">
   <img src="/posts/making-the-pc-game/chris-random-fact-generator.gif" alt="Chris' hilarious random fact generator" />
 </div>
 
-Or [Wells Riley's](https://wells.ee/) raining hamburgers:
+Or [Wells Riley's raining hamburgers](https://wells.ee/):
 
 <div style="display: flex; justify-content: center;">
   <img src="/posts/making-the-pc-game/wells-burgers.gif" alt="Wells' raining hamburgers" />
@@ -51,7 +51,7 @@ First thing I did, after making a list of inspirational blogs, was meet up with 
 
 ![Figma moodboard of various components we were considering in designing](/posts/making-the-pc-game/figma-moodboard.jpg)
 
-As you might have guessed, we ended up going with the first option. While all the designs and ideas were cool, the biggest factor was the belief in myself in being able to implement it. As soon as I saw description of th pc component, I immediately thought to myself *"Well, we can just have a SVG of every PC part, and when the user drags and drop the part it would just replace the SVG with another"*. More on this specific piece later.
+As you might have guessed, we ended up going with the first option. While all the designs and ideas were cool, the biggest factor was the belief in myself in being able to implement it. As soon as I saw description of the pc component, I immediately thought to myself *"Well, we can just have a SVG of every PC part, and when the user drags and drop the part it would just replace the SVG with another"*. More on this specific piece later.
 
 While designing we were discussing the limit of the game, such as giving the user many options to build the PC in different ways, but we ended up on just one happy path. Mainly to make it easier for myself and Yasemin.
 
@@ -82,12 +82,14 @@ So the general technical idea behind the PC component is as follows:
 The relevant folder structure:
 
 - ```index.astro``` the homepage contains all the PC parts with ```Icon``` components
-  - I intiially organized the original PC parts into ```Icon``` components in order to process the SVG and be able to pass in separate CSS variables for the PC parts and their labels - but my brother complained about how I'm doing this because - why wouldn't I just set the CSS myself? Or as you will see later, why am I making these original PC parts into ```Icon``` components and not the combined ones?
+  - I intially organized the original PC parts into ```Icon``` components in order to process the SVG and be able to pass in separate CSS variables for the PC parts and their labels - but my brother complained about how I'm doing this because - why wouldn't I just set the CSS myself? Or as you will see later, why am I making these original PC parts into ```Icon``` components and not the combined ones?
 - ```drag.js``` contains all the logic for dragging and dropping, switching dropzones, and dropping the labels
 - All svgs live in a single ```/svg``` folder
 - ```content.js``` which holds the SVG HTML content of all the combined PC parts
 
-My ```icon.astro``` component was partially inspired by [this article](https://ellodave.dev/blog/article/using-svgs-as-astro-components-and-inline-css/) as you can see below:
+### Icon Component
+
+My ```icon.astro``` component was mostly inspired by [this article](https://ellodave.dev/blog/article/using-svgs-as-astro-components-and-inline-css/) as you can see below:
 
 ```astro
 ---
@@ -156,6 +158,8 @@ const partAttributes = {
 
 Again, I'm still not sure of this decision. But all I used this component for was to be able to process the original PC part SVGs and be able to pass in separate CSS variables to the labels and PC parts. Maybe I could have just done with using CSS normally instead but oh well...
 
+### Drag and Drop JavaScript
+
 Most of the magic was in ```drag.js``` below, firstly with how dragging the object functions:
 
 ```javascript
@@ -183,7 +187,7 @@ function dragMoveListener(pEvent) {
 }
 ```
 
-Updating the dropzone content, everytime you drag and drop a PC part successfully:
+Updating the dropzone content, everytime you drag and drop a PC part successfully. I'm not posting the whole code snippet for brevity but the general gist of this part is that everytime a PC part is successfully dropped, the current dropzone gets replaced, as well as the text instruction displayed to the user, and the combined PC part is returned.
 
 ```javascript
 function getDropzoneContent() {
@@ -195,11 +199,6 @@ function getDropzoneContent() {
       instruction.textContent = instructions.ADD_COOLER;
       return svgElements.CPU_ON_MOTHERBOARD;
 
-    case CPU_ON_MOTHERBOARD:
-      currentDropzone         = COOLER_ON_CPU;
-      instruction.textContent = instructions.ADD_RAM;
-      return svgElements.COOLER_ON_CPU;
-
     case COOLER_ON_CPU:
       currentDropzone         = CASE;
       instruction.textContent = instructions.ADD_MOTHERBOARD_TO_CASE;
@@ -208,27 +207,6 @@ function getDropzoneContent() {
       caseElement && !caseElement.classList.contains(DROPZONE)
         ? caseElement.classList.add(DROPZONE)
         : null;
-
-      return svgElements.RAM_ON_MOTHERBOARD;
-
-    case CASE:
-      currentDropzone         = MOTHERBOARD_IN_CASE;
-      instruction.textContent = instructions.ADD_GPU;
-      return svgElements.MOTHERBOARD_IN_CASE;
-
-    case MOTHERBOARD_IN_CASE:
-      currentDropzone         = GPU_IN_CASE;
-      instruction.textContent = instructions.ADD_HDD;
-      return svgElements.GPU_IN_CASE;
-
-    case GPU_IN_CASE:
-      currentDropzone         = HDD_IN_CASE;
-      instruction.textContent = instructions.ADD_PSU;
-      return svgElements.HDD_IN_CASE;
-
-    case HDD_IN_CASE:
-      instruction.textContent = instructions.CONGRATS;
-      return svgElements.PSU_IN_CASE;
 
     default:
       return;
@@ -244,7 +222,7 @@ function setDropzoneAccept(pNewAccept) {
 }
 ```
 
-Setting what the dropzone accepts to a new PC part:
+Setting what the dropzone accepts to a new PC part by utilizing ```interact.js```. The dropped PC parts are set to hidden, call ```getDropzoneContent()``` to update the PC part.
 
 ```javascript
 window.addEventListener("load", () => {
@@ -256,24 +234,6 @@ window.addEventListener("load", () => {
           switch (currentDropzone) {
             case MOTHERBOARD:
               setDropzoneAccept(DZ_ACCEPT_CPU);
-              break;
-            case CPU_ON_MOTHERBOARD:
-              setDropzoneAccept(DZ_ACCEPT_COOLER);
-              break;
-            case COOLER_ON_CPU:
-              setDropzoneAccept(DZ_ACCEPT_RAM);
-              break;
-            case CASE:
-              setDropzoneAccept(DZ_ACCEPT_RAM_ON_MOTHERBOARD);
-              break;
-            case MOTHERBOARD_IN_CASE:
-              setDropzoneAccept(DZ_ACCEPT_GPU);
-              break;
-            case GPU_IN_CASE:
-              setDropzoneAccept(DZ_ACCEPT_HDD);
-              break;
-            case HDD_IN_CASE:
-              setDropzoneAccept(DZ_ACCEPT_PSU);
               break;
             default:
               break;
@@ -315,7 +275,7 @@ window.addEventListener("load", () => {
               monitorOff.style.visiblity = HIDDEN;
               monitorOff.innerHTML       = svgElements.MONITOR_ON;
               monitorOff.style.visiblity = VISIBLE;
-            }, 1000);
+            }, 1000); 
           }
         },
       },
@@ -335,6 +295,8 @@ pPartClass="z-40 dropzone text-rock dark:text-gasoline fill-current size-8/12 xl
 />
 ```
 
+### Retrieving Instructions & Combined PC Parts
+
 Finally, an example of what's in ```content.js``` just showing how I did not make use of the same ```icon.astro``` component *for some reason*:
 
 ```javascript
@@ -349,7 +311,7 @@ export const svgElements = {
         </svg>`,
 ```
 
-## Issues
+## Issues I've Faced
 
 ![My GitHub contribution history from June to October](/posts/making-the-pc-game/github-history.jpg)
 
@@ -368,3 +330,10 @@ When I started *coding with purpose* back in June, you can see most of [my contr
 - There was a large number of iterations between design and implementation, factor this when building a somewhat-complex program
 
 ## Final Thoughts
+
+- I could not have done this without Yasemin's help as a designer, which eliminates almost trivial problems to them such as fonts, color schemes and of course, the custom PC parts
+- In the future, when I have a more well-rounded repertoire as a developer, I would like to work on a barebones website similar to [David Winer's](https://davewiner.com/)
+- I am extremely proud and happy with how my first personal website ended up turning out
+- It is impressive to me how developers can work on *multiple* personal projects on top of their full time jobs, as well as juggle sleep, social life and excercise
+
+If you've made it this far, thank you so much for reading!
