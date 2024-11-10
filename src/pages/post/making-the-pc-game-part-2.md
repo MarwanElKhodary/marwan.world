@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/post.astro
 title: Making the PC Game - Part 2
-dateFormatted: October 30 2024
+dateFormatted: November 10 2024
 wordCount: 1,124 words
 readingTime: 6 min
 description: The technical details of the PC game
