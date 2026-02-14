@@ -216,9 +216,9 @@ window.addEventListener("load", () => {
           if (dropzoneId === HDD_IN_CASE) {
             setTimeout(() => {
               const monitorOff           = document.getElementById(MONITOR_OFF);
-              monitorOff.style.visiblity = HIDDEN;
+              monitorOff.style.visibility = HIDDEN;
               monitorOff.innerHTML       = svgElements.MONITOR_ON;
-              monitorOff.style.visiblity = VISIBLE;
+              monitorOff.style.visibility = VISIBLE;
             }, 1000); 
           }
         },
