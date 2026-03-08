@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/post.astro
 title: What I'm Doing Now
-dateFormatted: February 16 2026
+dateFormatted: March 8 2026
 wordCount: ""
 readingTime: ""
 description: A brief overview of what I'm focused on right now
@@ -12,56 +12,60 @@ description: A brief overview of what I'm focused on right now
 ### Working On
 
 - Designing and developing microservices with Azure with a large e-commerce retailer
-- Something that would help me read Arabic .pdf files with audio and translation support, but finding it hard to spend time learning more about OCR or .pdf processing
-- Getting my AI-900 certification
-- Entering technical writing
+- Getting my [AI-900 Certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+- Improving my technical writing
+- Trying to get better at public speaking via Toastmasters
 
 ### Listening To
 
 - Sarde
-- Joe Pass, Grant Green, that Japanese Band
+- Joe Pass
+- Grant Green
+- Curtis Fuller
 
 #### Songs I Love Currently
 
-- Tico Tico
-- Saclar
-- I Want You (She's So Heavy)
+- Tico Tico - Grant Green
+- Saclar - Kalben
+- I Want You (She's So Heavy) - The Beatles
+- Five Spot After Dark - Curtis Fuller
 
 ### Watching
 
 - Malcom In the Middle
-- Jujutsu Kaisen Season 2
+- Jujutsu Kaisen Season 3
 - Kurtlar Vadısı
+- Predictive History
 
 #### Watched
 
 - Hamnet
 - Ila Ayn?
+- Tajouje
+- Persepolis
 
 ### Reading
 
 - Babel
 - The Hostage
-- Personal Finance Book
+- Psychology of Money
+- Quran
 
 ### Ongoing
 
-- Playing guitar for one hour a day
+- Playing guitar for at least one hour a day
   - Theory learning:
     - How to apply triads
     - How to play with chord changes
   - Songs learned:
     - Saçlar
     - I Want You (She's So Heavy)
-- Running 15 minutes at 5 on the treadmill
-- Trying to go to more Pilates classes because I'm bored of my workout routine
-- Trying to quit Diet Coke
-- Trying to eat better
-- Writing more than 30 minutes a day
-- Playing League of Legends for a session a week
-- Ramadan is starting this week
-- It's been 3 months since my last Turkish class with my tutor, I need to do my last homework and get back into it, currently at B1 and stagnating
-- Going to attend my first Toastmasters session
-- Revisiting writing more, especially adding to this website's blogs, and LinkedIn posts
-- Trying to skip the winter
--Last year I was focusing on building, this year I'm focusing on business skills
+    - Autumn Leaves in B Minor
+- Went from 5-6 Diet Cokes per day to 1 per day
+- Writing daily in my gratitude journal
+- Ramadan
+- It's been 4 months since my last Turkish class with my tutor, I need to do my last homework and get back into it, currently at B1 and stagnating
+- Went to my first Toastmasters sessions
+- Revisiting writing more online, especially adding to this website's blogs, and LinkedIn posts
+- Winter is almost over!
+- Last year I was focusing on building, this year I'm focusing on business skills
