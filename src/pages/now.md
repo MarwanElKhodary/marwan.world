@@ -14,6 +14,7 @@ description: A brief overview of what I'm focused on right now
 - Designing and developing microservices with Azure with a large e-commerce retailer
 - Something that would help me read Arabic .pdf files with audio and translation support, but finding it hard to spend time learning more about OCR or .pdf processing
 - Getting my AI-900 certification
+- Entering technical writing
 
 ### Listening To
 
@@ -63,3 +64,4 @@ description: A brief overview of what I'm focused on right now
 - Going to attend my first Toastmasters session
 - Revisiting writing more, especially adding to this website's blogs, and LinkedIn posts
 - Trying to skip the winter
+-Last year I was focusing on building, this year I'm focusing on business skills
