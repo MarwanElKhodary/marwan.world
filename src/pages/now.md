@@ -12,7 +12,6 @@ description: A brief overview of what I'm focused on right now
 ### Working On
 
 - Designing and developing microservices with Azure with a large e-commerce retailer
-- Getting my [AI-900 Certification](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
 - Improving my technical writing
 - Trying to get better at public speaking via Toastmasters
 
@@ -32,8 +31,8 @@ description: A brief overview of what I'm focused on right now
 
 ### Watching
 
-- Malcom In the Middle
 - Jujutsu Kaisen Season 3
+- Malcom In the Middle
 - Kurtlar Vadısı
 - Predictive History
 
@@ -46,6 +45,7 @@ description: A brief overview of what I'm focused on right now
 
 ### Reading
 
+- Crime and Punishment
 - Babel
 - The Hostage
 - Psychology of Money
@@ -57,10 +57,10 @@ description: A brief overview of what I'm focused on right now
   - Theory learning:
     - How to apply triads
     - How to play with chord changes
+    - Autumn Leaves in B Minor
   - Songs learned:
     - Saçlar
     - I Want You (She's So Heavy)
-    - Autumn Leaves in B Minor
 - Went from 5-6 Diet Cokes per day to 1 per day
 - Writing daily in my gratitude journal
 - Ramadan
