@@ -25,19 +25,21 @@ description: A brief overview of what I'm focused on right now
 #### Songs I Love Currently
 
 - Tico Tico - Grant Green
-- Saclar - Kalben
+- Saçlar - Kalben
 - I Want You (She's So Heavy) - The Beatles
 - Five Spot After Dark - Curtis Fuller
 
 ### Watching
 
 - Jujutsu Kaisen Season 3
-- Malcom In the Middle
-- Kurtlar Vadısı
+- The Pitt
 - Predictive History
 
 #### Watched
 
+- Women on the Edge of a Nervous Breakdown
+- Volver
+- Leila and the Wolves
 - Hamnet
 - Ila Ayn?
 - Tajouje
@@ -46,6 +48,7 @@ description: A brief overview of what I'm focused on right now
 ### Reading
 
 - Crime and Punishment
+- For Bread Alone
 - Babel
 - The Hostage
 - Psychology of Money
@@ -63,9 +66,8 @@ description: A brief overview of what I'm focused on right now
     - I Want You (She's So Heavy)
 - Went from 5-6 Diet Cokes per day to 1 per day
 - Writing daily in my gratitude journal
-- Ramadan
 - It's been 4 months since my last Turkish class with my tutor, I need to do my last homework and get back into it, currently at B1 and stagnating
-- Went to my first Toastmasters sessions
+- Went to my three Toastmasters sessions
 - Revisiting writing more online, especially adding to this website's blogs, and LinkedIn posts
 - Winter is almost over!
-- Last year I was focusing on building, this year I'm focusing on business skills
+- Last year I was focusing on building, this year I'm focusing on making more business impact
