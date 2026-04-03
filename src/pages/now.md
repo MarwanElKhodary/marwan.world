@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/post.astro
 title: What I'm Doing Now
-dateFormatted: March 8 2026
+dateFormatted: April 3 2026
 wordCount: ""
 readingTime: ""
 description: A brief overview of what I'm focused on right now
