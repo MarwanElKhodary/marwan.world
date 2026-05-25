@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/post.astro
 title: My First Toastmasters Meeting
-dateFormatted: March 7 2026
+dateFormatted: April 3 2026
 wordCount: 1,831 words
 readingTime: 7 min
 description: I highly recommend it, especially for Gen Z'ers
