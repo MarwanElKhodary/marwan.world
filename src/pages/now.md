@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/post.astro
 title: What I'm Doing Now
-dateFormatted: May 25 2026
+dateFormatted: August 10 2026
 wordCount: ""
 readingTime: ""
 description: A brief overview of what I'm focused on right now
@@ -12,19 +12,23 @@ description: A brief overview of what I'm focused on right now
 ### Working On
 
 - An abstracted login platform with a major airline - built with .NET, Mulesoft and AWS
-- Improving my technical writing
+- Improving my rhythm on bass and in salsa dancing
+- Writing more
+- Reading more
 
 ### Listening To
 
-- Grant Green
-- Curtis Fuller
+- Willie Colon
+- Majida El Roumi
+- Abdul Halim Hafez
+- Lots of salsa
 
 #### Songs I Love Currently
 
-- Tico Tico - Grant Green
-- Saçlar - Kalben
-- I Want You (She's So Heavy) - The Beatles
-- Five Spot After Dark - Curtis Fuller
+- Miserable - Grupo Niche
+- Canto Nativo - La Radio Bembe Orquesta
+- Maa Jarida - Majida El Roumi
+- Bahlam Beek - Abdul Halim Hafez
 
 ### Watching
 
@@ -32,6 +36,8 @@ description: A brief overview of what I'm focused on right now
 
 #### Watched
 
+- The Odyssey
+- Obsession
 - الإرهابي
 - The Boy and the Heron
 - Women on the Edge of a Nervous Breakdown
@@ -44,9 +50,8 @@ description: A brief overview of what I'm focused on right now
 
 ### Reading
 
-- موسم الهجرة إلى الشمال - الطيب صالح
-- Meditations - Marcus Aurelius
-- Anna Karenina - Leo Tolstoy
+- أولاد حارتنا - نجيب محفوظ
+- The Bell Jar - Sylvia Plath
 
 ### Ongoing
 
@@ -55,10 +60,9 @@ description: A brief overview of what I'm focused on right now
     - How to apply roots, fifths, sevenths
     - Basic rythym and syncopation
     - Autumn Leaves
-- At around 2-3 Diet Cokes a day
-- I've been to two salsa classes!
+- I've been to ten salsa classes! And 4 salsa socials!
 - Enjoying summer in Toronto, trying to be outside at least everyday or other day!
-- Trying to reserve more time to join Arab community events in Toronto
+- I've been to lots of Arab community events in Toronto
 - Writing daily in my gratitude journal
-- Went to my three Toastmasters sessions, taking a break before rejoining
-- Last year I was focusing on building, this year I'm focusing on making more business impact
+- Went to my three Toastmasters sessions, haven't been since before April
+- Last year I was focusing on building, this year I'm focusing on being more creative and analog
